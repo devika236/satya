@@ -1,45 +1,103 @@
 <!doctype html>
 <html>
+
 <head>
 <title>Photo gallery</title>
 </head>
+
 <style>
+
+@keyframes fadeout
+{
+from{opacity:0.1}
+to{opacity:1}
+}
+
 header
 {
 background:black;
 color:white;
 padding:20px;
 text-align:center;
-font-size:30px;
-width:60%;
+font-size:40px;
+width:40%;
 margin:auto;
 font-family:Comic Sans MS bold;
-box-shadow:10px 10px 20px #1abc9c;
-transition:0.5s;                                                                  
+box-shadow:0px 2px 20px #1abc9c;
+transition:0.5s;
 }
 
 header:hover
 {
-box-shadow:10px 10px 20px #58d68d  ;
+box-shadow:0px 5px 20px #58d68d;
+}
+
+html
+{
+animation:fadeout 5s;
 }
 
 body
 {
 background:black;
+text-align:center;
 }
 
 .pic
 {
-width:40%;
-margin-top:20px;
+width:20%;
+margin:40px;
+border-radius:20px;
+box-shadow:0px 1px 15px #58d68d;
+transition:0.5s;
+}
+
+.pic:hover
+{
+cursor:pointer;
+transform:scale(1.20);
+box-shadow:0px 1px 15px #82e0aa;
 }
 
 </style>
 
 <body>
 <header> WEB PHOTO GALLERY </header>
-
+<a href="pg1.html">
 <img src="images/pg1.jpg" class="pic">
+</a>
+
+<a href="pg2.html">
+<img src="images/pg2.jpg" class="pic">
+</a>
+
+<a href="pg3.html">
+<img src="images/pg3.jpg" class="pic">
+</a>
+
+<a href="pg4.html">
+<img src="images/pg4.jpg" class="pic">
+</a>
+
+<a href="pg5.html">
+<img src="images/pg5.jpg" class="pic">
+</a>
+
+<a href="pg6.html">
+<img src="images/pg6.jpg" class="pic">
+</a>
+<a href="pg7.html">
+<img src="images/pg7.jpg" class="pic">
+</a>
+
+<a href="pg8.html">
+<img src="images/pg8.jpg" class="pic">
+</a>
+
+<a href="pg9.html">
+<img src="images/pg9.jpg" class="pic">
+</a>
+
 
 
 
