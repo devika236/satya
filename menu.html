@@ -1,87 +1,325 @@
-<!doctype html>
-<html>
-<head><title>menu</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title>
 </head>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 <style>
 
-header
-{
-width:70%;
-height:500px;
-background:black;
-text-align:center;
-margin:auto;
-box-shadow:0px 5px 20px #343333;
+#im{
+  backgrond: red;width:80%;height: 400px;margin: auto;text-align: center;
 }
 
-header img
-{
-width:100%;
-height:100%;
+#second{
+  backgrund: red;width: 100%;height: 100px;margin-top: 30px;
 }
 
-nav
-{
-width:50%;
-background:#9b59b6;
-margin:auto;
-text-align:center;
-margin-top:30px;
+#navbar
+            {
+            backgrund:teal;
+            cursor:pointer;
+            margin-bottom:-30px;
+            }
+
+            #navbar ol{
+                    margin:auto;
+                    width:400px;
+                    margin-top:00px;
+                    }
+
+                    #navbar ol li
+                                {
+                                list-style:none;
+                                display:inline-block;
+                                padding:20px;
+                                background:yellow;
+                                margin-left:-5px;
+                                transition:0.50s;
+                                box-shadow:5px 5px 5px gray;
+                                margin-top:50px;
+                                }
+
+                                #navbar ol li:hover
+                                                    {
+                                                   // transform:scale(1.50) rotate(360deg);
+                                                    border-radius:20px;
+                                                    background:red;
+
+                                                    }
+
+
+
+ /* Extra small devices (phones, 600px and down) */
+
+ @media only screen and (max-width: 600px)
+ {
+       body{
+        backgrund:black;
+       }
+
+    
+       #navbar
+            {
+            backgrund:teal;
+            cursor:pointer;
+            margin-bottom:-30px;
+            }
+
+            #navbar ol{
+                    margin:auto;
+                    width:300px;
+                    margin-top:100px;
+                    }
+
+                    #navbar ol li
+                                {
+                                list-style:none;
+                                display:inline-block;
+                                padding:10px;
+                                background:yellow;
+                                margin-left:-5px;
+                                transition:0.50s;
+                                box-shadow:5px 5px 5px gray;
+                                margin-top:-50px;
+                                }
+
+                                #navbar ol li:hover
+                                                    {
+                                                   // transform:scale(1.50) rotate(360deg);
+                                                    border-radius:20px;
+                                                    background:red;
+
+                                                    }
+
+#m1{
+  width:100%;height: 300px;border-radius: 5px;
 }
 
-nav ol
+
+ }
+
+/*  Small devices (portrait tablets and large phones, 600px and up)  */
+
+@media only screen and (min-width: 600px) 
 {
-list-style:none;
+       body{
+        backgrond: red;
+       }
+
+      
+       #navbar
+            {
+            backgrund:teal;
+            cursor:pointer;
+            margin-bottom:-30px;
+            }
+
+            #navbar ol{
+                    margin:auto;
+                    width:300px;
+                    margin-top:100px;
+                    }
+
+                    #navbar ol li
+                                {
+                                list-style:none;
+                                display:inline-block;
+                                padding:10px;
+                                background:yellow;
+                                margin-left:-5px;
+                                transition:0.50s;
+                                box-shadow:5px 5px 5px gray;
+                                margin-top:-50px;
+                                }
+
+                                #navbar ol li:hover
+                                                    {
+                                                    //transform:scale(1.50) rotate(360deg);
+                                                    border-radius:20px;
+                                                    background:red;
+
+                                                    }
+
+
+
+                                                    #m1{
+  width:100%;height: 300px;border-radius: 5px;
+}
 }
 
-nav ol li
-{
-display:inline;
-padding:30px;
-transition:1s;
+/* Medium devices (landscape tablets, 768px and up) */
+
+
+@media only screen and (min-width: 768px)
+ {
+   body{
+    backgrund: red;
+   }
+   
+       #navbar
+            {
+            backgrund:teal;
+            cursor:pointer;
+            margin-bottom:-30px;
+            }
+
+            #navbar ol{
+                    margin:auto;
+                    width:300px;
+                    margin-top:100px;
+                    }
+
+                    #navbar ol li
+                                {
+                                list-style:none;
+                                display:inline-block;
+                                padding:10px;
+                                background:yellow;
+                                margin-left:-5px;
+                                transition:0.50s;
+                                box-shadow:5px 5px 5px gray;
+                                margin-top:-50px;
+                                }
+
+                                #navbar ol li:hover
+                                                    {
+                                                   // transform:scale(1.50) rotate(360deg);
+                                                    border-radius:20px;
+                                                    background:red;
+
+                                                    }
+
+
+
+                                                 
+#m1{
+  width:100%;height: 300px;border-radius: 5px;
+}
 }
 
-nav ol li a:link
-{
-color:white;
-text-decoration:none;
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px)
+ {
+  body{
+    backgrund: red;
+  }
+  
+       #navbar
+            {
+            backgrund:teal;
+            cursor:pointer;
+            margin-bottom:-30px;
+            }
+
+            #navbar ol{
+                    margin:auto;
+                    width:300px;
+                    margin-top:100px;
+                    }
+
+                    #navbar ol li
+                                {
+                                    
+                                list-style:none;
+                                display:inline-block;
+                                padding:10px;
+                                background:yellow;
+                                margin-left:-5px;
+                                transition:0.50s;
+                                box-shadow:5px 5px 5px gray;
+                                margin-top:-50px;
+                                }
+
+                                #navbar ol li:hover
+                                                    {
+                                                    //transform:scale(1.50) rotate(360deg);
+                                                    border-radius:20px;
+                                                    background:red;
+
+                                                    }
+
+
+
+                                                    #m1{
+  width:100%;height: 300px;border-radius: 5px;
+}
 }
 
-nav ol li a:visited
-{
-color:white;
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px)
+ {
+body{
+    backgrund: red;
 }
 
-nav ol li:hover a:visited
-{
-color:#3146fa;
+       #navbar
+            {
+            backgrund:teal;
+            cursor:pointer;
+            margin-bottom:-30px;
+            }
+
+            #navbar ol{
+                    margin:auto;
+                    width:400px;
+                    margin-top:100px;
+                    }
+
+                    #navbar ol li
+                                {
+                                list-style:none;
+                                display:inline-block;
+                                padding:10px;
+                                background:yellow;
+                                margin-left:-5px;
+                                transition:0.50s;
+                                box-shadow:5px 5px 5px gray;
+                                margin-top:-50px;
+                                }
+
+                                #navbar ol li:hover
+                                                    {
+                                                   // transform:scale(1.50) rotate(360deg);
+                                                    border-radius:20px;
+                                                    background:red;
+
+                                                    }
+
+
+                                                    #m1{
+  width:70%;height: 300px;border-radius: 5px;
 }
 
-nav ol li:hover
-{
-color:#3146fa;
-}
+} 
 </style>
-
 <body>
-<header>
-<img src="images/m1.jpg">
-</header>
+  <div id="im">
+   <img src="images/m2.jpg" id="m1">
+  </div>
 
-<nav>
-<ol>
-<li><a href="#">Home</a></li>
-<li><a href="#">Practice</a></li>
-<li><a href="#">Behance</a></li>
-<li><a href="#">Project</a></li>
-</ol>
-</nav>
+  <div id="second">
+    <div id="navbar">
+      <ol>
+          <li><a href="#">Home</a></li>
 
-<div style="height:300px">
-</div>
+      <li><a href="practice.html">Practice </a></li>
+      
+     
+      
+      <li><a href="https://www.google.com/">Google </a></li>
+      
+      <li><a href="https://www.youtube.com/watch?v=sTsjt8J4OmA">YouTube </a></li>
+      
+      </ol>
+  
+      </div>
 
+  
+  </div>
 </body>
 </html>
