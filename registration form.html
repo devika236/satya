@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+
+<head><title>Registration</title>
+</head>
+
+<style>
+*{
+margin:0;
+paddingt:0;
+}
+
+#main
+{
+background:;
+width:70%;
+margin:auto;
+text-align:center;
+margin-top:50px;
+padding:15px;
+}
+
+table
+{
+width:95%;
+margin:auto;
+border:1px solid black;
+border-radius:10px;
+margin-top:10px;
+}
+
+input[type="text"],[type="password"]{width:90%;height:30px;}
+input[type="submit"],[type="reset"]{width:30%;margin:20px;height:50px;
+background:#c2c2c2;color:#ffffff;}
+input[type="number"],[type="age"]{width:85%;height:30px;}
+</style>
+
+<header> </header>
+<tr><td></td></tr>
+
+<body>
+<div id="main">
+<table border="1" cellpadding="15px" >
+<caption style="font-size=20px" margin="10px" color="#ffbd00">REGISTRATION FORM
+</caption>
+
+<form action="https://tataplay/user/get.php" method="get">
+
+<tr>
+<td>
+<label for="uname">NAME</lable>
+</td>
+
+<td>
+<input id="uname" type="text" placeholder=Type name..." 
+required title="type your name">
+</td>
+</tr>
+
+<tr>
+<td>
+<label>AGE</lable>
+</td>
+
+<td>
+<input type="number" max="60" min="10"
+</td>
+</tr>
+
+<tr>
+<td>
+<label>MESSAGE</lable>
+</td>
+
+<td>
+<textarea cols="30" rows="5"></textarea>
+</td>
+</tr>
+
+<tr>
+<td>
+<label>GENDER</lable>
+</td>
+
+<td>
+Male<input checked type="radio" name="gender" value="male">
+Female<input checked type="radio" name="gender" value="female">
+Others<input checked type="radio" name="gender" value="other">
+</td>
+</tr>
+
+<tr>
+<td>
+<label>HOBBY</lable>
+</td>
+
+<td>
+Reading<input checked type="checkbox" value="R">
+Writing<input checked type="checkbox" value="W">
+Translating<input checked type="checkbox" value="T">
+Dancing<input checked type="checkbox" value="D">
+Singing<input checked type="checkbox" value="S">
+</td>
+</tr>
+
+<tr>
+<td>
+<label>GMAIL</lable>
+</td>
+
+<td>
+<input id="gmail" type="text" placeholder=Type name..." 
+required title="type your gmail">
+</td>
+</tr>
+
+<tr>
+<td>
+<label>CITY</lable>
+</td>
+
+<td>
+<select multiple size="2">
+<option value="delhi">Delhi</option>
+<option value="haryana">Haryana</option>
+<option value="rajasthan">Rajasthan</option>
+<option value="up">UP</option>
+<option value="bihar">Bihar</option>
+<option value="mumbai">Mumbai</option>
+<option value="kolkata">Kolkata</option>
+</td>
+</tr>
+
+<tr>
+<td>
+<label>COUNTRY</lable>
+</td>
+
+<td>
+<input list="country"/>
+<datalist id="country">
+<option value="in">India</option>
+<option value="usa">USA</option>
+<option value="uk">UK</option>
+<option value="ru">Russia</option>
+<option value="ch">China</option>
+<option value="ja">Japan</option>
+<option value="srl">Sri Lanka</option>
+
+<tr>
+<td>
+<label>UPLOAD FILE</lable>
+</td>
+
+<td>
+<input type="file" </td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>
+<input type="submit" value="Register">
+<input type="reset">
+</td>
+</tr>
+
+</form>
+</table>
+</div>
+
+</body>
+</html>
+
