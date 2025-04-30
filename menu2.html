@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<head><title>menu2</title>
+</head>
+
+<style>
+
+@keyframes show
+{
+from{opacity:0;height:10px;}
+to{opacity:1;height:300px;}
+}
+
+#menu
+{
+float:left;
+background:#b25efa;
+color:white;
+width:200px;
+padding:15px;
+height:10px;
+text-align:center;
+box-shadow:2px 5px 10px gray;
+overflow:hidden;
+cursor:pointer;
+transition:1s;
+margin-left:20%;
+}
+
+#menu:hover
+{
+height:300px;
+}
+
+#menu ol
+{
+list-style:none;
+padding:0px;
+}
+
+#menu ol li
+{
+padding:10px;
+transition:1s;
+margin:5px;
+}
+
+ol li:hover
+{
+background:#8a45f2;
+border-bottom:2px black solid;
+}
+
+a:link{color:white;text-decoration:none;}
+a:visited{color:#edd8ff;}
+a:hover{text-decoration:underline;}
+</style>
+
+<body>
+
+<div style="width:70%:background:blue;margin:auto;">
+<div id="menu">
+Menu
+<ol>
+<li><a href="#">Home</a></li>
+<li><a href="#">Product</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Data</a></li>
+<li><a href="#">Contact</a></li>
+</ol>
+</div>
+
+<div id="menu">
+Menu
+<ol>
+<li><a href="#">Home</a></li>
+<li><a href="#">Product</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Data</a></li>
+<li><a href="#">Contact</a></li>
+</ol>
+</div>
+
+</body>
+</html>
