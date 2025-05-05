@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+<head><title>WORKING WITH ANIMATION</title>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<style>
+
+@keyframes runbanner
+{
+10%{left:0%};
+20%{left:-19%;}
+30%{left:-19%;}
+40%{left:-38%;}
+50%{left:-38%;}
+60%{left:-57%;}
+70%{left:-57%;}
+80%{left:-77%;}
+100%{left:-77%;}
+} 
+
+#myheader
+{
+//background:red;
+width:530%;
+height:400px;
+}
+
+.pic
+{
+height:400px;
+width:19%;
+position:relative;
+left:0px;
+margin-left:-2px;
+animation:runbanner 10s infinite alternate;
+}
+
+#mask
+{
+width:90%;
+height:400px;
+overflow:hidden;
+margin:auto;
+}
+
+@media(min-width:320px)
+{
+#mask
+{height:150px;width:100%;}
+.pic
+{height:150px;}
+}
+
+@media(min-width:768px)
+/*styles for tablets*/
+{
+#mask
+{
+height:200px;
+width:70%;
+display:block;
+}
+.pic
+{height:200px;}
+}
+
+@media(min-width:1024px)
+/*styles for desktop computers*/
+{
+#mask
+{
+height:400px;
+width:90%;
+display:block;
+}
+.pic
+{height:400px;}
+}
+</style>
+
+<body>
+
+<div id="mask">
+
+<div id="myheader">
+<img class="pic" src="images/b1.jpg">
+<img class="pic" src="images/b2.jpg">
+<img class="pic" src="images/b3.jpg">
+<img class="pic" src="images/b4.jpg">
+<img class="pic" src="images/b5.jpg">
+</div>
+
+</div>
+
+
+</body>
+</html>

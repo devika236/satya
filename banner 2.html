@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head><title>WORKING WITH ANIMATION</title>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<style>
+@keyframes ani1
+{
+10%{background-image:url(images/g1.gif);}
+20%{background-image:url(images/g1.gif);}
+
+30%{background-image:url(images/g2.gif);}
+40%{background-image:url(images/g2.gif);}
+
+50%{background-image:url(images/g3.gif);}
+60%{background-image:url(images/g3.gif);}
+
+70%{background-image:url(images/g4.gif);}
+80%{background-image:url(images/g4.gif);}
+
+90%{background-image:url(images/g5.gif);}
+100%{background-image:url(images/g5.gif);}
+
+
+}
+
+
+#banner
+{
+width:90%;
+height:400px;
+box-shadow:10px 10px 10px gray;
+margin:auto;
+background-image:url(images/g6.jpg);
+//background-size:cover;
+background-size:100% 100%;
+animation:ani1 12s infinite;
+}
+
+@media(min-width: 320px)
+{
+#banner
+{
+height:100px;
+width:100%;
+}
+
+}
+
+@media(min-width:768px)
+{
+/*styles for tablets */
+#banner
+{
+display:block;
+width:50%;
+height:200px;
+}
+}
+
+
+@media(min-width:1024px)
+{
+/* styles for desktop computers */
+#banner
+{
+display:block;
+width:90%;
+height:400px;
+}
+}
+
+
+
+
+</style>
+<body>
+
+<div id="banner">
+</div>
+
+</body>
+</html>
