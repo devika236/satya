@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pet grooming</title>
+</head>
+<style>
+    body
+{
+margin: 0px;
+padding: 0px;
+}
+
+a:link{color: #0009c8;text-decoration: none;}
+a:visited{color: #181fb2 ; }
+a:hover{color:white;;text-decoration:underline;}
+
+#top
+{
+background-color:#82e4fc;
+height:150px;
+margin-top:-50px ;
+}
+
+#navbar
+{
+margin-left:1000px;
+margin-top:-70px;
+font-size: 20px;
+}
+
+#navbar ol{
+margin:auto;
+width:65%;
+}
+
+#navbar ol li
+{
+list-style:none;
+display:inline-block;
+padding: 15px;
+margin-left:10px;
+}
+
+#navbar ol li:hover
+{
+border-radius:15px;
+background:#181fb2
+}
+
+
+#puppy
+{
+width: 100px;
+margin-top:70px;
+margin-left:30px;
+}
+ 
+#top2
+{
+background: rgb(130, 228, 252);width:100%;height:1400px;margin-top:-50px;
+}
+
+#pet
+{
+ margin-left:1010px;
+ margin-top:-400px;   
+}
+
+
+
+#main
+{
+width:70%;
+margin:auto;
+text-align:center;
+margin-top:50px;
+padding:15px;
+}
+
+table
+{
+width:95%;
+margin:auto;
+border:1px solid black;
+margin-top:10px;
+}
+
+input[type="text"],[type="password"]{width:90%;height:30px;}
+input[type="submit"],[type="reset"]{width:30%;margin:20px;height:50px;
+background:#181fb2;color:#ffffff;}
+input[type="number"],[type="age"]{width:85%;height:30px;}
+
+
+</style>
+<body>
+    
+<div id="top">
+<img src="images/pc6.png" id="puppy"> 
+</div>
+
+<div id="navbar">
+<ol>
+<li><a href="pet grooming.html">Home </a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="service.html">Services  </a></li>
+
+<li><a href="contact.html">Contact </a></li>
+
+<li><a href="login form.html">Login </a></li>
+
+</ol>
+
+</div>
+
+<div id="top2">
+    
+<h4 style="color:#181fb2;font-size:25px;margin-top:60px;font-family:Comic sans MS;margin-left:50px;">
+    "Get in Touch"</h5>
+
+    
+    <h1 style="color:#181fb2;font-size:65px;margin:65px;font-family:verdana;">
+Call Us,<br/> 
+contact our team via<br/> the form below,<br/>
+ or book your pet's <br/> appointment directly, <br/> on the website.
+    </h1>
+
+
+<header> </header>
+<tr><td></td></tr>
+
+<body>
+<div id="main">
+<table border="1" cellpadding="15px" >
+<caption style="font-size:30px;margin:10px;color:#181fb2">CONTACT FORM
+</caption>
+
+<form action="https://tataplay/user/get.php" method="get">
+
+<tr>
+<td>
+<label for="uname">NAME</lable>
+</td>
+
+<td>
+<input id="uname" type="text" placeholder="Type name..." 
+required title="type your name">
+</td>
+</tr>
+
+<tr>
+<td>
+<label>AGE</lable>
+</td>
+
+<td>
+<input type="number" max="60" min="10">
+</td>
+</tr>
+
+<tr>
+<td>
+<label>MESSAGE</lable>
+</td>
+
+<td>
+<textarea cols="30" rows="5"></textarea>
+</td>
+</tr>
+
+<tr>
+<td>
+<label>GENDER</lable>
+</td>
+
+<td>
+Male<input checked type="radio" name="gender" value="male">
+Female<input checked type="radio" name="gender" value="female">
+</td>
+</tr>
+
+
+<tr>
+<td>
+<label>CITY</lable>
+</td>
+
+<td>
+<select multiple size="2">
+<option value="delhi">Delhi</option>
+<option value="haryana">Haryana</option>
+<option value="rajasthan">Rajasthan</option>
+<option value="up">UP</option>
+<option value="bihar">Bihar</option>
+<option value="mumbai">Mumbai</option>
+<option value="kolkata">Kolkata</option>
+</td>
+</tr>
+
+<tr>
+<td>
+<label>COUNTRY</lable>
+</td>
+
+<td>
+<input list="country"/>
+<datalist id="country">
+<option value="in">India</option>
+<option value="usa">USA</option>
+<option value="uk">UK</option>
+<option value="ru">Russia</option>
+<option value="ch">China</option>
+<option value="ja">Japan</option>
+<option value="srl">Sri Lanka</option>
+
+
+
+<tr>
+<td></td>
+
+<td>
+<input type="submit" value="Register">
+<input type="reset">
+</td>
+</tr>
+
+</form>
+</table>
+</div>
+
+</div>
+</body>
+</html>
+

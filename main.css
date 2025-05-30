@@ -1,0 +1,62 @@
+body
+{
+margin: 0px;
+padding: 0px;
+}
+
+a:link{color: #0009c8;text-decoration: none;}
+a:visited{color: #181fb2 ; }
+a:hover{color:white;;text-decoration:underline;}
+
+#top
+{
+background-color:#82e4fc;
+height: 150px;
+margin-top:-50px ;
+}
+
+#navbar
+{
+margin-left:1000px;
+margin-top:-70px;
+font-size: 20px;
+}
+
+#navbar ol{
+margin:auto;
+width:60%;
+}
+
+#navbar ol li
+{
+list-style:none;
+display:inline-block;
+padding: 15px;
+margin-left:10px;
+}
+
+#navbar ol li:hover
+{
+border-radius:15px;
+background:#181fb2
+}
+
+
+#puppy
+{
+width: 100px;
+margin-top:70px;
+margin-left:30px;
+}
+ 
+#top2
+{
+background: rgb(130, 228, 252);width:100%;height:500px;margin-top:-50px;
+}
+
+#pet
+{
+ margin-left:970px;
+ margin-top:-400px;   
+}
+
