@@ -5,8 +5,8 @@ padding: 0px;
 }
 
 a:link{color: #0009c8;text-decoration: none;}
-a:visited{color: #181fb2 ; }
-a:hover{color:white;;text-decoration:underline;}
+a:visited{color: #181fb2;}
+a:hover{color:white;}
 
 #top
 {
@@ -38,7 +38,6 @@ margin-left:10px;
 #navbar ol li:hover
 {
 border-radius:15px;
-color:white;
 background:#181fb2;
 }
 
@@ -91,4 +90,32 @@ margin-top:-120px;
 {
 margin-left:1300px;
 margin-top:-110px;
+}
+
+nav
+{
+font-size:20px; 
+text-align:center;
+background:#8c91f8;
+width:12%;
+margin:auto;
+border-radius:20px;
+margin-top:50px;   
+}
+
+nav ol li
+{
+list-style:none;
+display:inline-block;
+padding:12px;
+margin-left:-50px;
+}
+
+#pc
+{
+width:300px;
+height:200px; 
+margin-left:140px; 
+border-radius:20px; 
+margin-top:50px; 
 }
