@@ -14,7 +14,7 @@ padding: 0px;
 
 a:link{color: #0009c8;text-decoration: none;}
 a:visited{color: #181fb2 ; }
-a:hover{color:white;;text-decoration:underline;}
+a:hover{color:white;}
 
 #top
 {
@@ -49,6 +49,10 @@ border-radius:15px;
 background:#181fb2
 }
 
+#navbar ol li:hover a:visited
+{
+color:white;
+}
 
 #puppy
 {
@@ -59,7 +63,7 @@ margin-left:30px;
  
 #top2
 {
-background: rgb(130, 228, 252);width:100%;height:1400px;margin-top:-50px;
+background: rgb(130, 228, 252);width:100%;height:1200px;margin-top:-50px;
 }
 
 #pet
@@ -72,7 +76,7 @@ background: rgb(130, 228, 252);width:100%;height:1400px;margin-top:-50px;
 
 #main
 {
-width:70%;
+width:60%;
 margin:auto;
 text-align:center;
 margin-top:50px;
@@ -81,10 +85,10 @@ padding:15px;
 
 table
 {
-width:95%;
+width:75%;
 margin:auto;
-border:1px solid black;
-margin-top:10px;
+border:2px solid #0009c8;
+margin-top:50px;
 }
 
 input[type="text"],[type="password"]{width:90%;height:30px;}
@@ -164,16 +168,11 @@ contact our team via<br/> the form below,<br/>
 
 <body>
 <div id="main">
-<table border="1" cellpadding="15px" >
-<caption style="font-size:30px;margin:10px;color:#181fb2">CONTACT FORM
+<table border="0" cellpadding="15px" >
+<caption style="font-size:30px;margin:10px;color:#181fb2">Contact Form
 </caption>
 
 <form action="https://tataplay/user/get.php" method="get">
-
-<tr>
-<td>
-<label for="uname">NAME</lable>
-</td>
 
 <td>
 <input id="uname" type="text" placeholder="Type name..." 
@@ -181,79 +180,19 @@ required title="type your name">
 </td>
 </tr>
 
-<tr>
 <td>
-<label>AGE</lable>
-</td>
-
-<td>
-<input type="number" max="60" min="10">
+<input id="userid" type="text" placeholder="Type email..." 
+required title="type Email">
 </td>
 </tr>
 
-<tr>
 <td>
-<label>MESSAGE</lable>
-</td>
-
-<td>
-<textarea cols="30" rows="5"></textarea>
+<textarea cols="50" rows="5"></textarea>
 </td>
 </tr>
 
-<tr>
 <td>
-<label>GENDER</lable>
-</td>
-
-<td>
-Male<input checked type="radio" name="gender" value="male">
-Female<input checked type="radio" name="gender" value="female">
-</td>
-</tr>
-
-
-<tr>
-<td>
-<label>CITY</lable>
-</td>
-
-<td>
-<select multiple size="2">
-<option value="delhi">Delhi</option>
-<option value="haryana">Haryana</option>
-<option value="rajasthan">Rajasthan</option>
-<option value="up">UP</option>
-<option value="bihar">Bihar</option>
-<option value="mumbai">Mumbai</option>
-<option value="kolkata">Kolkata</option>
-</td>
-</tr>
-
-<tr>
-<td>
-<label>COUNTRY</lable>
-</td>
-
-<td>
-<input list="country"/>
-<datalist id="country">
-<option value="in">India</option>
-<option value="usa">USA</option>
-<option value="uk">UK</option>
-<option value="ru">Russia</option>
-<option value="ch">China</option>
-<option value="ja">Japan</option>
-<option value="srl">Sri Lanka</option>
-
-
-
-<tr>
-<td></td>
-
-<td>
-<input type="submit" value="Register">
-<input type="reset">
+<input type="submit" value="Contact Us">
 </td>
 </tr>
 
