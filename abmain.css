@@ -1,7 +1,15 @@
+@keyframes zoomout
+{
+from{transform:scale(2)}
+to{transform:scale(1)}
+}
+
 body
 {
 margin: 0px;
 padding: 0px;
+transition:0.5s;
+animation:zoomout 2s;
 }
 
 a:link{color: #0009c8;text-decoration: none;}

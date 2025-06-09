@@ -2,6 +2,8 @@ body
 {
 margin: 0px;
 padding: 0px;
+animation:fadeIn;
+animation-duration:2.5s; 
 }
 
 a:link{color: #0009c8;text-decoration: none;}
@@ -129,5 +131,5 @@ box-shadow:2px 2px 10px black;
 #pc:hover
 {
 animation:pulse;
-animation-duration:3s; 
+animation-duration:1s; 
 }
