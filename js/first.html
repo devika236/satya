@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image</title>
+</head><style>
+.mystyle
+{
+    cursor:pointer;
+    margin:100px;
+    width: 50%;
+}
+</style>
+<body>
+    <h1 style="color:green;text-align:center;font-size:50px;">Creating Element Dynamically</h1>
+<script>
+var myimage = document.createElement("img")
+document.body.appendChild(myimage)
+myimage.src="images/f1.jpg"
+myimage.style="border:20px gray solid;"  
+myimage.style.boxShadow="5px 5px 10px black" 
+myimage.className="mystyle" 
+</script>  
+</body>
+</html>
