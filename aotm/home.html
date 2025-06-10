@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+@keyframes zoomout
+{
+from{transform:scale(2)}
+to{transform:scale(1)}
+}
+
+a:link{color:white;text-decoration: none;}
+a:visited{color:white;}
+a:hover{color:#1248ad;}
+
+#nav
+{
+backgrund:black;
+margin-left:73%;
+margin-top:-700px;
+cursor:pointer;
+}
+
+#nav ol
+{
+margin:auto;
+width:60%;
+}
+
+#nav ol li
+{
+list-style:none;
+display:inline-block;
+padding:15px;
+margin-left:10px;
+border:3px white solid;
+border-radius: 15px;
+}
+
+#nav ol li:hover
+{
+border-radius:15px;
+background:white;
+}
+
+#nav ol li:hover a:visited
+{
+color:#1248ad;
+}
+
+#pic
+{
+ margin-left:130px;
+ margin-top:150px;
+ transition:0.5s;
+animation:zoomout 2s;   
+}
+
+body
+{
+background:url(images/s.jpg);  
+}
+</style>
+<body>
+
+   <img src="images/tt.png" id="pic">
+
+    <div id="nav">
+<ol>
+<li><a href="home.html">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="characters.html">Characters</a></li>
+</ol>
+</div>
+
+</body>
+</html>
