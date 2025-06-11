@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <style>
 #ch
@@ -19,20 +21,71 @@ display:flex;
 width:300px;
 height:350px;
 backgrund:white; 
-margin:80px;
+margin:80px; 
 }
 
-#smurfs
+#fam :hover
+{
+animation:pulse;
+animation-duration:1s;
+}
+body
 {
 background:#92d9ff;
-margin-top:-60px;
+}
+
+a:link{color:white;text-decoration: none;}
+a:visited{color:white;}
+a:hover{color:#1248ad;}
+
+#nav
+{
+backgrund:black;
+margin-left:73%;
+margin-top:50px;
+cursor:pointer;
+margin-bottom: 100px;
+
+}
+
+#nav ol
+{
+margin:auto;
+width:60%;
+}
+
+#nav ol li
+{
+list-style:none;
+display:inline-block;
+padding:15px;
+margin-left:10px;
+border:3px white solid;
+border-radius: 15px;
+}
+
+#nav ol li:hover
+{
+border-radius:15px;
+background:white;
+}
+
+#nav ol li:hover a:visited
+{
+color:#1248ad;
 }
 </style>
 <body>
-      
-   <div id="smurfs">
 
-      <h1 style="color:#095fd5;font-size:80px;font-family:Gordito;text-align:center;margin-bottom:-20px;">CHARACTERS</h1>
+            <div id="nav">
+<ol>
+<li><a href="home.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="characters.html">Characters</a></li>
+</ol>
+</div>
+      
+      <h1 style="color:#095fd5;font-size:80px;font-family:Gordito;text-align:center;margin-top:-70px;">CHARACTERS</h1>
 
    <div id="ch">
      <div id="fam">
@@ -123,6 +176,5 @@ margin-top:-60px;
  </div>
  </div>
 
-</div>
 </body>
 </html>
