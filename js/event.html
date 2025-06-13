@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+
+<style>
+#toolbar
+{
+    background: black;
+    width:100%;
+    height:40px;
+    box-shadow: 2px 2px 15px gray;
+    border-radius:10px;
+    margin-bottom:100px;
+    position: fixed;
+    top:0px;
+    left:0px;
+}
+
+.pic
+{
+    height:250px;
+    box-shadow:5px 5px 10px gray;
+    width:50% ;
+    margin-top: 80px;
+}
+
+#myp
+{
+    margin-top:50px;
+    text-align:justify;
+    padding: 20px;
+    transition:1s;
+}
+
+#mycolor
+{
+    width:5%;
+    margin:7px;
+}
+
+#slider1
+{
+    width:10%;
+    margin-left:30px;
+}
+
+body{
+    transition:1s;
+}
+</style>
+<body>
+ <h1 style="margin-top:60px;">Working with Event in Javascript</h1> 
+
+ <div id ="toolbar">
+<input id="mycolor" type="color">
+<input id="slider1" type="range" max="50" min="10" value="10">
+ </div>
+
+ <div style="text-align:center;padding:10px;height:300px;width:70%;margin:auto;border:0px black solid;">
+<img id="mypic" class="pic" src="images/e1.jpeg">
+<div>
+    <input id="slider" type="range" max="80" min="20" value="20">
+</div>
+ </div>
+
+ <p id="myp">
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. In, quasi, itaque neque accusamus ipsam tempore mollitia dicta aperiam laboriosam repellendus, quo corporis minima dolore nisi ipsa sapiente necessitatibus aliquid expedita.
+Beatae, omnis ullam aspernatur architecto reiciendis doloribus iusto. Unde amet repellat harum, explicabo magni doloribus ducimus laboriosam eaque dolores debitis molestias autem placeat, fugit aut qui asperiores rem accusamus inventore?
+ </p>
+ 
+ <script>
+var c = document.getElementById("mycolor")
+var s = document.getElementById("slider")
+var s1 = document.getElementById("slider1")
+var p = document.getElementById("mypic")
+var myp = document.getElementById("myp")
+
+s1.onchange = function()
+{
+    myp.style.fontSize = s1.value+"px"
+}
+
+s.onchange = function()
+{
+    p.style.width = this.value+"%"
+
+    document.title = this.value
+}
+
+c.onchange = function()
+{
+  document.body.style.background = this.value
+}
+
+
+document.title="no error"
+
+ </script>
+</body>
+</html>

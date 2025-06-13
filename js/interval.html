@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timeout</title>
+</head>
+<style>
+.pic
+{
+   width: 100%;
+   height: 350px; 
+}
+
+#add
+{
+    width: 50%;
+    height: 350px;
+    box-shadow: 10px 10px 10px gray;
+    position: absolute;
+    top: 150px;
+    left: 350px;
+    display: none;
+}
+
+#close
+{
+    width: 5%;
+    position: relative;
+    top: -390px;
+    left: 720px;
+    cursor: pointer;
+}
+</style>
+
+<body>
+
+<div id="add">
+<img class="pic" src="images/gif.gif">
+<div id="b" onclick="myaction()">
+<img id="close" src="images/close.png">    
+</div>
+</div>
+
+<script>
+var a = document.getElementById("add")
+function myaction()
+{
+    a.style.display = "none"
+}
+
+function dispadd()
+{
+    a.style.display = "block"
+    a.style.top = "150px"
+    a.style.left = "350px"
+}
+
+var t1 = setTimeout("dispadd()",2000)
+var t2 = setTimeout("myaction()",10000)
+
+</script>
+</body>
+</html>
