@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+#box
+{
+width: 500px;
+padding:20px;
+background: black;
+margin: auto;
+color:white;
+text-align: center;
+font-size: 30px;
+font-family: arial black;
+margin-top:200px;
+}
+
+
+</style>
+<body>
+<div id="box">
+DID
+</div>
+    <script>
+    var r,g,b
+    var t
+var b1 = document.getElementById("box")
+
+t = setInterval("changecolor()",100)
+
+function changecolor()
+{
+r = Math.round(Math.random()*255)
+g = Math.round(Math.random()*255)
+b = Math.round(Math.random()*255)
+var mycolor = `rgb(${r},${g},${b})`
+b1.style.background=mycolor
+
+r = Math.round(Math.random()*255)
+g = Math.round(Math.random()*255)
+b = Math.round(Math.random()*255)
+var mycolor = `rgb(${r},${g},${b})`
+
+document.body.style.background = mycolor
+
+
+}
+    
+    document.title="no error"
+</script>
+</body>
+</html>

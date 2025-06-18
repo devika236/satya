@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+
+
+</style>
+<body>
+    
+<script>
+    var r,g,b
+var b1 = document.createElement("button")
+document.body.appendChild(b1)
+b1.style="width:50px;height:40px;border-radius:20px;cursor:pointer;"
+b1.innerHTML="🐦‍🔥"
+b1.onclick = function()
+{
+r = Math.round(Math.random()*255)
+g = Math.round(Math.random()*255)
+b = Math.round(Math.random()*255)
+var mycolor = `rgb(${r},${g},${b})`
+b1.style.background=mycolor
+document.body.style.background = this.style.background
+}
+
+
+document.title="no error"
+</script>    
+</body>
+</html>
