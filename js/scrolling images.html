@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#main
+{
+    background: black;
+    width:600%;
+    height:400px;
+    margin: auto;
+    box-shadow: 5px 5px 15px black;
+    position: absolute;
+    left: 0px;
+    transition: 2s;
+}
+
+.pic
+{
+width:500px;
+height:400px;
+position: relative;
+padding: 0px;
+left:0px;
+transition: 2s;
+}
+
+#mask
+{
+ width:500px;
+height:400px;
+background: yllow; 
+position: relative;
+padding: 0px;
+left:700px;
+overflow-x: hidden; 
+}
+</style>
+<body>
+
+    <div id="mask">
+
+<div id="main">
+    <img src="images/s1.jpg" class="pic">
+    <img src="images/s2.jpg" class="pic">
+    <img src="images/s3.jpg" class="pic">
+    <img src="images/s4.jpg" class="pic">
+    <img src="images/s5.jpg" class="pic">
+</div>
+
+</div>
+
+<input  style="position: absolute;left: 900px;margin-top: 30px;" id="slide" type="range" max="2000" min="100">
+
+<script>
+var s = document.getElementById("slide")
+var p = document.getElementById("main")
+
+s.onchange = function()
+{
+    p.style.left = -this.value+"px"
+
+    document.title = this.value
+}
+
+document.title = "no error"
+</script>    
+</body>
+</html>
