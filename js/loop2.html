@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#main
+{
+    width:300px;
+    height:600px;
+    background: black;
+    margin: auto;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top:30px;
+    box-shadow: 5px 5px 15px black;
+    border-radius: 30px;
+    letter-spacing: 2px;
+}
+
+.text
+{
+ border-bottom: 1px white solid;
+}
+
+h2:hover
+{
+background: red;
+cursor: pointer;
+
+}
+</style>
+<body>
+
+<div id="main">
+<script>
+
+r = Math.round(Math.random()*255)
+g = Math.round(Math.random()*255)
+b = Math.round(Math.random()*255)
+var mycolor = `rgb(${r},${g},${b})`
+
+document.body.style.background = mycolor
+
+var n = prompt("enter a number to create table...?","2")
+document.write(`<h1>Table of ${n}</h1>`)
+for(var i = 1;i<=10;i++)
+{
+
+    document.write(`<h2 class="text"> ${n} <span>❌</span> ${i}
+        =${n*i}</h2>`)
+
+}
+</script>
+
+</div>    
+    
+</body>
+</html>
