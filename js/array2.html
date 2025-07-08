@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<style>
+#box
+{
+    width: 90%;
+    margin: auto;
+    color:palevioletred;
+    text-align: center;
+    font-size: 60px;
+    padding: 10px;
+    text-shadow: 2px 2px 5px black;
+    font-family: arial black;
+    margin-top: 30px;
+}
+</style>
+<body>
+  <div id="box" class="animate__animated animate__zoomIn">
+    NEWS
+  </div>  
+
+  <script>
+ var news = [" PM Modi's Big Cheer For West Indies Cricket Team In Trinidad and Tobago","Groom Among 5 Killed, 5 Injured In Road Accident In Sambhal, UP"," 3 Killed, 4 Injured In Firing Incident In Bihar's Siwan; Cops On Spo","Huge Fire Breaks Out At Vishal Mega Mart At Karol Bagh, 13 Tenders At Spot","On Dalai Lama's Statement, MEA Says India Does Not Take Any Position On Matters of Religion And Faith", "Maharashtra Govt Declares Oct 3 'Elite Marathi Language Day' Amid Hindi-Marathi Row"]
+
+ var b = document.getElementById("box")
+ c=0
+ var newscount = news.length
+ var i = 1
+ function shownews()
+ {
+  if (i==1)
+ {
+  i=0
+  b.className="animate__animated animate__fadeInLeft"
+ }
+ else 
+ {
+  b.className="animate__animated animate__fadeInRight"
+  i=1
+ }
+ document.title = i
+
+ b.innerHTML = news[c]
+
+ if(c<newscount-1)
+ {
+  c++
+ }
+
+ else
+ {
+   c=0
+ }
+ 
+ }
+
+ setInterval("shownews()",5000)
+
+  </script>
+</body>
+</html>
