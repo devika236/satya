@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+.pic
+{
+    width: 60%;
+    height: 500px;
+    margin: auto;
+    display: block;
+    box-shadow: 5px 5px 10px black;
+}
+
+body
+{
+    text-align: center;
+}
+</style>
+<body>
+
+    <h1 id="text"></h1>
+
+    <img id="pic" src="images/i0.jpg" class="pic">
+
+<script>
+
+var d = document.getElementById("pic")
+var t = document.getElementById("text")
+var today = new Date()
+var day = today.getDay()
+
+switch (day)
+{
+    case 1:
+        t.innerHTML ="Image of Monday"
+        d.src ="https://www.google.com/search?sca_esv=659f7c99a03a1a5c&sxsrf=AE3TifM4dWTWCOLQkGxG80esiSMA3BDZbA:1752040149586&q=nature+image&udm=2&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIemkjk18Cn72Gp24fGkjjh6xc8y8oU3IJovU34XDyOFvEl9PQhCX-bXyx8AzQGU_JUmd7tO0Sp0t0qHqXwx4ZXWZ46FMJ_5qOlBWL317zdnko09c3cS91eOWyqKC8pqNi-T4DhtjV8zWXL8UGIxO7yEoZ63L3KD6mXO4QEFSbHyfGyMpJqQ&sa=X&ved=2ahUKEwja__2Viq-OAxX44zgGHYq3MOoQtKgLKAF6BAgQEAE&biw=1920&bih=945&dpr=1#vhid=oa7_1poSvrt70M&vssid=mosaic"
+        break;
+
+    case 2:
+        t.innerHTML ="Image of Tuesday"
+        d.src ="images/i1.jpg"
+        break;
+
+     case 3:
+        t.innerHTML ="Image of Wednesday"
+        d.src ="images/i2.jpg"
+        break;
+
+    case 4:
+        t.innerHTML ="Image of Thursday"
+        d.src ="images/i3.jpg"
+        break;
+
+    case 5:
+        t.innerHTML ="Image of Friday"
+        d.src ="images/i4.jpg"
+        break;
+
+    case 6:
+        t.innerHTML ="Image of Saturday"
+        d.src ="images/i5.jpg"
+        break;
+
+    case 0:
+        t.innerHTML ="Image of Sunday"
+        break;
+
+        default:
+            t.innerHTML ="Image of the Day"
+            d.src ="images/i6.jpg"
+}
+
+document.title="no error"
+</script>
+</body>
+</html>
