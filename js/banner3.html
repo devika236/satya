@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<style>
+#banner
+{
+width: 70%;
+height: 400px;
+margin: auto;
+overflow: hidden;
+background: black;
+transition: 2s;
+}
+
+.pic
+{
+width: 70%;
+height: 400px;
+transition: 2s;
+position: absolute;
+
+}
+</style>
+
+<body onLoad="run_banner()">
+
+ <div id="banner">
+<img id="p5" src="images/b5.jpg" class="pic" >
+<img id="p4" src="images/b4.jpg" class="pic" >
+<img id="p3" src="images/b3.jpg" class="pic" >
+<img id="p2" src="images/b2.jpg" class="pic" >
+<img id="p1" src="images/b1.jpg" class="pic" >
+ </div>   
+
+ <script>
+var p1 = document.getElementById("p1")
+var p2 = document.getElementById("p2")
+var p3 = document.getElementById("p3")
+var p4 = document.getElementById("p4")
+var p5 = document.getElementById("p5")
+
+
+var a1 = "animate__backOutUp"
+var a2 = "animate__backInDown"
+c = 0
+function run_banner()
+{
+
+    if(c<=5)
+{
+    c++
+}
+
+else
+{
+    c=1
+}
+
+switch(c)
+{
+    case 1:
+    p1.classList.add('animate__animated',a1)  
+    p1.style.opacity = "0"
+    break;
+
+    case 2:
+        p2.classList.add('animate__animated',a1)       
+        p2 .style.opacity = "0"
+        break;
+
+    case 3:
+        p3.classList.add('animate__animated',a1) 
+        p3.style.opacity = "0"
+        break;
+
+    case 4:
+        p4.classList.add('animate__animated',a1) 
+        p4.style.opacity = "0"
+        break;
+
+    case 5:
+      
+    break;
+    
+    case 6:
+        p1.style.opacity = "1" 
+         p2.style.opacity = "1" 
+          p3.style.opacity = "1" 
+           p4.style.opacity = "1" 
+       
+           p1.classList.remove('animate__animated',a1) 
+            p2.classList.remove('animate__animated',a1) 
+             p3.classList.remove('animate__animated',a1) 
+              p4.classList.remove('animate__animated',a1) 
+            
+              p1.classList.add('animate__animated',a2) 
+              p2.classList.add('animate__animated',a2) 
+              p3.classList.add('animate__animated',a2) 
+              p4.classList.add('animate__animated',a2) 
+              break;
+             
+}
+
+document.title ="c"
+setTimeout("run_banner()",2000)
+}
+ </script>
+</body>
+</html>
