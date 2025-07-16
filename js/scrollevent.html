@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.pic
+{
+    height: 300px;
+    width:30%;
+    margin: auto;
+    display: block;
+    box-shadow: 5px 5px 15px black;
+    border: 2px black solid;
+    border-radius: 30px;
+    transition: 0.50s;
+}
+
+
+</style>
+<body>
+    <img src ="images/se1.jpg" class ="pic">
+    <div style ="height:200px;"></div>
+
+        <img src ="images/se2.jpg" class ="pic">
+    <div style ="height:200px;"></div>
+
+        <img src ="images/se3.jpg" class ="pic">
+    <div style ="height:200px;"></div>
+
+        <img src ="images/se4.jpg" class ="pic">
+    <div style ="height:200px;"></div>
+
+        <img src ="images/se5.jpg" class ="pic">
+    <div style ="height:200px;"></div>
+    
+    <script>
+        var d = document.getElementsByTagName("img")
+        var s;
+       function f1()
+       {
+        s = Math.round(window.scrollY)
+        if(s>150)
+       {
+        d[0].style.transform = "scale(0)"
+       }
+        else
+       {
+        d[0].style.transform = "scale(1)"
+       }
+        
+  if(s>650)
+       {
+        d[1].style.transform = "scale(0)"
+       }
+        else
+       {
+        d[1].style.transform = "scale(1)"
+       }
+
+         if(s>1150)
+       {
+        d[2].style.transform = "scale(0)"
+       }
+        else
+       {
+        d[2].style.transform = "scale(1)"
+       }
+
+  if(s>1500)
+       {
+        d[3].style.transform = "scale(0)"
+       }
+        else
+       {
+        d[3].style.transform = "scale(1)"
+       }
+
+
+         if(s>1550)
+       {
+        d[4].style.transform = "scale(0)"
+       }
+        else
+       {
+        d[4].style.transform = "scale(1)"
+       }
+        document.title = Math.round(window.scrollY)
+       }
+
+
+        window.addEventListener("scroll",f1)
+    </script>
+</body>
+</html>
