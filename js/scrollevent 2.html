@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<style>
+.pic
+{
+    height: 300px;
+    width:30%;
+    margin: auto;
+    display: block;
+    box-shadow: 5px 5px 15px black;
+    border: 2px black solid;
+    border-radius: 30px;
+    transition: 0.50s;
+    margin-top: 200px;
+}
+
+
+</style>
+<body>
+    <img src ="images/se1.jpg" class ="pic">
+    <div style ="height:200px;"></div>
+
+        <img src ="images/se2.jpg" class ="pic">
+    <div style ="height:200px;"></div>
+
+        <img src ="images/se3.jpg" class ="pic">
+    <div style ="height:200px;"></div>
+
+        <img src ="images/se4.jpg" class ="pic">
+    <div style ="height:200px;"></div>
+
+        <img src ="images/se5.jpg" class ="pic">
+    <div style ="height:200px;"></div>
+    
+    <script>
+        var d = document.getElementsByTagName("img")
+        var s;
+       function f1()
+       {
+        s = Math.round(window.scrollY)
+        if(s>150)
+       {
+           d[0].classList.add('animate__animated', 'animate__bounceOutLeft');
+       }
+        else
+       {
+        d[0].classList.remove('animate__animated', 'animate__bounceOutLeft');
+        d[0].classList.add('animate__animated', 'animate__bounceInLeft');
+       }
+        
+ if(s>650)
+       {
+         d[1].classList.add('animate__animated', 'animate__bounceOutLeft');
+       
+       }
+        else
+       {
+         d[1].classList.remove('animate__animated', 'animate__bounceOutLeft');
+         d[1].classList.add('animate__animated', 'animate__bounceInLeft');
+       }
+
+         if(s>1150)
+       {
+         d[2].classList.add('animate__animated', 'animate__bounceOutLeft');
+       }
+        else
+       {
+         d[2].classList.remove('animate__animated', 'animate__bounceOutLeft');
+          d[2].classList.add('animate__animated', 'animate__bounceInLeft');
+       }
+
+  if(s>1500)
+       {
+        d[3].classList.add('animate__animated', 'animate__bounceOutLeft');
+       }
+        else
+       {
+         d[3].classList.remove('animate__animated', 'animate__bounceOutLeft');
+         d[3].classList.add('animate__animated', 'animate__bounceInLeft');
+       }
+
+
+         if(s>2200)
+       {
+         d[4].classList.add('animate__animated', 'animate__bounceOutLeft');
+       }
+        else
+       {
+         d[4].classList.remove('animate__animated', 'animate__bounceOutLeft');
+        d[4].classList.add('animate__animated', 'animate__bounceInLeft');
+       }
+    
+        document.title = Math.round(window.scrollY)
+       }
+
+
+        window.addEventListener("scroll",f1)
+    </script>
+</body>
+</html>
