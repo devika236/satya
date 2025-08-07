@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body
+{
+    width: 100%;
+    height: 800px;
+    background: black;
+    overflow: hidden;
+}
+
+.pic
+{
+    width: 10%;
+    cursor: pointer;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+</style>
+<body>
+    <script>
+        var x = 0
+        var y = 0
+
+        for(var i = 0;i<=10;i++)
+    {
+        var g = document.createElement("img")
+        g.src = "images/g1.gif"
+        g.style.left = Math.round(Math.random()*window.innerWidth)+"px"
+         g.style.top = Math.round(Math.random()*window.innerHeight)+"px"
+         g.className = "pic"
+         document.body.appendChild(g)
+    }
+
+    var c = document.getElementsByTagName("img")
+
+    c[9].style.width = "20%"
+
+    c[9].onmousemove = function()
+    {
+        c[9].style.top = y
+        c[9].style.left = x
+    }
+    function f1(e)
+    {
+        x = -100+e.pageX+"px"
+         y = -300+e.pageY+"px"
+
+         document.title = x+","+y
+    }
+
+
+
+
+    document.addEventListener("mousemove",f1)
+    </script>
+    
+</body>
+</html>
