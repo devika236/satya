@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="can" >
+    </canvas>
+  <script>
+    var d = document.getElementById("can")
+    d.width = window.innerWidth;
+    d.height = window.innerHeight;
+
+    var c = d.getContext("2d")
+    var brushsize = 10
+    var drawmode = false;
+    function draw(e)
+    {
+        if(drawmode)
+    {
+          c.beginPath()
+          c.arc(e.pageX,e.pageY,brushsize,0,2 * Math.PI);
+          c.fillStyle="red"
+          c.fill()
+    }
+    }
+
+    function f1()
+    {
+        if(drawmode)
+    {
+        drawmode = false
+    }
+    else
+    {
+        drawmode = true
+    }
+
+    document.title = drawmode
+    }
+    
+document.addEventListener("mousemove",draw)
+document.addEventListener("mousemove",f1 )
+   
+  </script>  
+</body>
+</html>
