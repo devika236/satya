@@ -11,18 +11,35 @@
     position: absolute;
     top: 20px;
  }   
+
+ #slide
+ {
+  position: absolute;
+  left: 100px;
+  top: 20px;
+ }
+
+
 </style>
 <body>
     <input type="color" id="mycolor">
-    <canvas id="can" >
+    <input id = "slide" type="range" max="50" min="5">
+    <canvas id="can" style="background: white;">
     </canvas>
   <script>
     var drawcolor = "black"
     var d = document.getElementById("can")
+    var s = document.getElementById("slide")
     d.width = window.innerWidth-10;
     d.height = window.innerHeight-40;
     var mycolor = document.getElementById("mycolor")
     
+    s.onclick = function()
+    {
+      brushsize = this.value
+      drawmode = false
+    }
+
     mycolor.onchange = function()
     {
         drawcolor = this.value
@@ -79,7 +96,7 @@
 
        if(e.keyCode ==69)
        {
-        drawcolor = (drawcolor=="white")?"red":"white"
+        drawcolor = (drawcolor=="white")?"red":d.style.background
         document.title = drawcolor
        }
 
