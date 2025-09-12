@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+</head>
+<style>
+#header,#policy,#more
+{
+font-size: 30px;
+font-family:Comic Sans MS;
+background:rgb(120, 210, 238);
+color: white;padding:10px;
+width:20%;
+text-align: center;
+cursor: pointer;
+
+}
+
+.mystyle
+{
+border: 1px solid black;
+text-align: justify;
+box-sizing: border-box;
+padding: 20px;
+font-size: 25px;
+}
+#h
+{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(5, 130, 168);
+    font-family: arial black;
+}
+</style>
+<body>
+    <h1 id="h">Working with Jquery Selector</h1>
+    <div id="header">ABOUT</div>
+    <div id="about">
+    <p class="mystyle" id="p1">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorum placeat sit! Neque ipsa assumenda quo illum fugit rerum dolorum eos consectetur, voluptatem quibusdam porro obcaecati totam earum ducimus quas!
+       Possimus reprehenderit suscipit quas repudiandae quidem nam ipsum repellendus facilis eligendi iusto, totam nesciunt? Suscipit officiis, corrupti saepe eum molestiae exercitationem nobis ab dignissimos animi accusamus, aspernatur ipsum totam doloribus.
+       Optio reiciendis, cupiditate quisquam voluptatum provident suscipit vero animi quasi. Dignissimos vitae expedita laboriosam quaerat totam ab sunt temporibus nostrum animi ex dolor id veniam possimus nihil, qui libero delectus.
+    </p>   
+    
+    <div id="policy">POLICY</div>
+    <p class="mystyle" id="p2">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorum placeat sit! Neque ipsa assumenda quo illum fugit rerum dolorum eos consectetur, voluptatem quibusdam porro obcaecati totam earum ducimus quas!
+       Possimus reprehenderit suscipit quas repudiandae quidem nam ipsum repellendus facilis eligendi iusto, totam nesciunt? Suscipit officiis, corrupti saepe eum molestiae exercitationem nobis ab dignissimos animi accusamus, aspernatur ipsum totam doloribus.
+       Optio reiciendis, cupiditate quisquam voluptatum provident suscipit vero animi quasi. Dignissimos vitae expedita laboriosam quaerat totam ab sunt temporibus nostrum animi ex dolor id veniam possimus nihil, qui libero delectus.
+    </p> 
+
+     <div id="more">MORE</div>
+    <p class="mystyle" id="p3">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorum placeat sit! Neque ipsa assumenda quo illum fugit rerum dolorum eos consectetur, voluptatem quibusdam porro obcaecati totam earum ducimus quas!
+       Possimus reprehenderit suscipit quas repudiandae quidem nam ipsum repellendus facilis eligendi iusto, totam nesciunt? Suscipit officiis, corrupti saepe eum molestiae exercitationem nobis ab dignissimos animi accusamus, aspernatur ipsum totam doloribus.
+       Optio reiciendis, cupiditate quisquam voluptatum provident suscipit vero animi quasi. Dignissimos vitae expedita laboriosam quaerat totam ab sunt temporibus nostrum animi ex dolor id veniam possimus nihil, qui libero delectus.
+    </p> 
+    </div>
+
+    <script>
+        $("p").hide()
+        $(document).ready(function()
+    {
+        $("#header").click(function()
+    {
+        $("#p1").toggle(600)
+        $("#p3").slideUp(600)
+        $("#p2").slideUp(600)
+    })
+
+     $("#policy").click(function()
+    {
+        $("#p2").toggle(600)
+        $("#p1").slideUp(600)
+        $("#p3").slideUp(600)
+    })
+
+     $("#more").click(function()
+    {
+        $("#p3").toggle(600)
+        $("#p1").slideUp(600)
+        $("#p2").slideUp(600)
+    })
+    })
+    </script>
+</body>
+</html>
