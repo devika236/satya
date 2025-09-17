@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+</head>
+<style>
+#h
+{
+    text-align: center;
+    font-size: 50px;
+    color: rgb(56, 125, 102);
+    font-family: comic sans ms;
+}
+.pic
+{
+    width:200px;
+    height:300px;
+    box-shadow: 3px 3px 5px black;
+    margin: 50px;
+    cursor: pointer;
+    transition: 0.50s;
+}
+</style>
+<body>
+    <h1 id="h">Welcome to JQuery</h1>
+ <script>
+  for(var i=0;i<=9;i++)
+  {
+    var p = document.createElement("img")
+    document.body.appendChild(p)
+    p.className="pic"
+    p.src="images/jq"+i+".jpg"
+  }  
+
+  $("img").fadeTo(0,0.40)
+  $(document).ready(function()
+  {
+    $("img").mousemove(function()
+    {
+        $(this).fadeTo(1000,0.99)
+        this.style.transform="scale(1.50)"
+    })
+
+    $("img").mouseout(function()
+    {
+        $(this).fadeTo(1000,0.40)
+        this.style.transform="scale(1)"
+    })
+  })
+ </script>   
+</body>
+</html>
