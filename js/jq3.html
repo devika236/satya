@@ -16,7 +16,7 @@
     width:200px;
     height:300px;
     box-shadow: 3px 3px 5px black;
-    margin: 50px;
+    margin: 80px;
     cursor: pointer;
     transition: 0.50s;
 }
@@ -35,15 +35,15 @@
   $("img").fadeTo(0,0.40)
   $(document).ready(function()
   {
-    $("img").mousemove(function()
+    $("img").mouseover(function()
     {
-        $(this).fadeTo(1000,0.99)
+        $(this).fadeTo(1000,0.90)
         this.style.transform="scale(1.50)"
     })
 
     $("img").mouseout(function()
     {
-        $(this).fadeTo(1000,0.40)
+        $(this).fadeTo(1000,0.50)
         this.style.transform="scale(1)"
     })
   })
