@@ -1,408 +1,274 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-
-</head>
-<style>
-   body{
-    margin: 0px;
-   }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <style>
+    body
+    {
+      background: rgb(0, 0, 0);
+    }
+    #header
+    {
+      background: black;
+      height:60px;
+      
+    }
+    .box {
+       padding: 20px;
+      background-color:black;
+      text-align: center;
+      height: 350px;
+      color: white;
+      font-size: 30px;
+      margin-top: 10px;
+    }
     
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      margin-top:0px;
+      color:white;
+      margin-left: -1200px;
+    }
 
+    h2 {
+       font-family: 'Montserrat', sans-serif;
+       font-size: 2rem;
+       font-weight: 600;
+       background: #a569bd;
+       width: 450px;
+       margin-top: -20px;
+       margin-left: 30px;
+       color:white;
+       border-radius: 10px;
+       padding: 5px;
+    }
+     
+ 
+    #para
+    {
+      font-family: 'Montserrat', sans-serif;
+      text-align: justify;
+      font-size: 25px;
+      padding: 10px;
+      margin-left: 30px;
+    }
+
+
+    #pic
+    {
+      margin-left: 1100px;
+      width:17%;
+      margin-top: -10000px;
+    }
+    #p
+    {
+        width: 50px;
+        height: 50px;
+        margin: 15px;
+        box-shadow: 0px 0px 8px rgb(255, 255, 255);
+        border-radius: 25px;
+    }
+    #pp
+    {
+       width: 100%;
+       height: 100%;
+    }
    
+       a:link{color:#ffffff;text-decoration:none}
+    a:visited{color:#ffffff; }
+    a:hover{color:white }
 
-a:link{color:#1abc9c;text-decoration:none}
-a:visited{color:#1abc9c; }
-a:hover{text-decoration:underline;color:white }
-a:active{background:orange; }
-
-
-
-
- /* Extra small devices (phones, 600px and down) */
-
- @media only screen and (max-width: 600px)
- {
-       body{
-        backgrond:black;
-       }
-
-       #logo{
-        width: 50px;height: 50px;margin: 10px;
-       }
-
-       #in{
-        font-size:30px ;color: #28b463 ;text-shadow: 1px 1px 1px gray;text-align: center;
-       }
-
-       #navbar
-            {
-            backgrund:teal;
-            cursor:pointer;
-            margin-bottom:-30px;
-            }
-
-            #navbar ol{
-                    margin:auto;
-                    width:300px;
-                    margin-top:100px;
-                    }
-
-                    #navbar ol li
-                                {
-                                list-style:none;
-                                display:inline-block;
-                                padding:10px;
-                                background:#faf183;
-                                margin-left:-5px;
-                                transition:0.50s;
-                                box-shadow:5px 5px 5px gray;
-                                margin-top:-50px;
-                                }
-
-                                #navbar ol li:hover
-                                                    {
-                                                   // transform:scale(1.50) rotate(360deg);
-                                                    border-radius:20px;
-                                                    background:#ff5f5f;
-
-                                                    }
-
-
-
-                                                    #first{
-                                                        background:#f5b7b1 ;width: 100%;height: 500px;border: 3px ridge black;margin-top: 100px;border-radius: 5px;
-                                                    }
-
-                                                    #second{
-                                                        background:white;width:90%;height:400px;margin-top:-520px;margin-left: 35px;box-shadow: 5px 5px 5px gray;border-radius: 15px;
-                                                    }
-
-                                                    #aa{
-                                                        font-size:35px ;color:white;text-shadow: 1px 1px 1px black;margin: 10px;text-indent: 30px;margin-bottom:-290px;
-                                                    }
-
-                                                    #myself{
-                                                        font-size:17px ;color:#e74c3c ;text-shdow: 1px 1px 1px black;margin-bottom:-90px;text-indent: 30px;text-align: justify;margin: 30px;margin-top: 90px;
-                                                    }
- }
-
-/*  Small devices (portrait tablets and large phones, 600px and up)  */
-
-@media only screen and (min-width: 600px) 
+    #navbar
 {
-       body{
-        backgrund: red;
-       }
-
-       #logo{
-        width:60px;height: 60px;margin:20px;
-       }
-
-       #in{
-        font-size:40px ;color: #28b463 ;text-shadow: 1px 1px 1px gray;text-align: center;
-       }
-
-       #navbar
-            {
-            backgrund:teal;
-            cursor:pointer;
-            margin-bottom:-30px;
-            }
-
-            #navbar ol{
-                    margin:auto;
-                    width:300px;
-                    margin-top:100px;
-                    }
-
-                    #navbar ol li
-                                {
-                                list-style:none;
-                                display:inline-block;
-                                padding:10px;
-                                background:#faf183;
-                                margin-left:-5px;
-                                transition:0.50s;
-                                box-shadow:5px 5px 5px gray;
-                                margin-top:-50px;
-                                }
-
-                                #navbar ol li:hover
-                                                    {
-                                                    //transform:scale(1.50) rotate(360deg);
-                                                    border-radius:20px;
-                                                    background:#ff5f5f;
-
-                                                    }
-
-
-
-                                                    #first{
-                                                        background: #f5b7b1;width: 100%;height: 500px;border: 3px ridge black;margin-top: 100px;border-radius: 5px;
-                                                    }
-
-                                                    #second{
-                                                        background:white;width:90%;height:400px;margin-top:-520px;margin-left: 35px;box-shadow: 5px 5px 5px gray;border-radius: 15px;
-                                                    }
-
-                                                    #aa{
-                                                        font-size:40px ;color:white;text-shadow: 1px 1px 1px black;margin: 10px;text-indent: 30px;margin-bottom:-290px;
-                                                    }
-
-                                                    #myself{
-                                                        font-size:18px ;color:#e74c3c ;text-shdow: 1px 1px 1px black;margin-bottom:-90px;text-indent: 30px;text-align: justify;margin: 30px;margin-top: 90px;
-                                                    }
+margin-left:1100px;
+margin-top:-70px;
+font-size: 1.5rem;
+font-weight: 600;
+cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-
-
-@media only screen and (min-width: 768px)
- {
-   body{
-    backgrund: red;
-   }
-   #logo{
-        width: 60px;height: 60px;margin: 10px;
-       }
-
-       #in{
-        font-size:30px ;color: #28b463;text-shadow: 1px 1px 1px gray;text-align: center;
-       }
-
-       #navbar
-            {
-            backgrund:teal;
-            cursor:pointer;
-            margin-bottom:-30px;
-            }
-
-            #navbar ol{
-                    margin:auto;
-                    width:300px;
-                    margin-top:100px;
-                    }
-
-                    #navbar ol li
-                                {
-                                list-style:none;
-                                display:inline-block;
-                                padding:10px;
-                                background:#faf183;
-                                margin-left:-5px;
-                                transition:0.50s;
-                                box-shadow:5px 5px 5px gray;
-                                margin-top:-50px;
-                                }
-
-                                #navbar ol li:hover
-                                                    {
-                                                   // transform:scale(1.50) rotate(360deg);
-                                                    border-radius:20px;
-                                                    background:#ff5f5f;
-
-                                                    }
-
-
-
-                                                    #first{
-                                                        background: #f5b7b1;width: 100%;height: 500px;border: 3px ridge black;margin-top: 100px;border-radius: 5px;
-                                                    }
-
-                                                    #second{
-                                                        background:white;width:90%;height:400px;margin-top:-520px;margin-left: 35px;box-shadow: 5px 5px 5px gray;border-radius: 15px;
-                                                    }
-
-                                                    #aa{
-                                                        font-size:40px ;color:white;text-shadow: 1px 1px 1px black;margin: 10px;text-indent: 30px;margin-bottom:-290px;
-                                                    }
-
-                                                    #myself{
-                                                        font-size:20px ;color:#e74c3c ;text-shdow: 1px 1px 1px black;margin-bottom:-90px;text-indent: 30px;text-align: justify;margin: 30px;margin-top: 90px;
-                                                    }
-}
-
-
-/* Large devices (laptops/desktops, 992px and up) */
-
-@media only screen and (min-width: 992px)
- {
-  body{
-    backgrond: red;
-  }
-  #logo{
-        width: 50px;height: 50px;margin: 10px;
-       }
-
-       #in{
-        font-size:5cap ;color: #28b463;text-shadow: 1px 1px 1px gray;text-align: center;
-       }
-
-       #navbar
-            {
-            backgrund:teal;
-            cursor:pointer;
-            margin-bottom:-30px;
-            }
-
-            #navbar ol{
-                    margin:auto;
-                    width:300px;
-                    margin-top:100px;
-                    }
-
-                    #navbar ol li
-                                {
-                                    
-                                list-style:none;
-                                display:inline-block;
-                                padding:10px;
-                                background:#faf183;
-                                margin-left:-5px;
-                                transition:0.50s;
-                                box-shadow:5px 5px 5px gray;
-                                margin-top:-50px;
-                                }
-
-                                #navbar ol li:hover
-                                                    {
-                                                    //transform:scale(1.50) rotate(360deg);
-                                                    border-radius:20px;
-                                                    background:#ff5f5f;
-
-                                                    }
-
-
-
-                                                    #first{
-                                                        background:#f5b7b1 ;width: 100%;height: 500px;border: 3px ridge black;margin-top: 100px;border-radius:5px;
-                                                    }
-
-                                                    #second{
-                                                        background:white;width:90%;height:400px;margin-top:-520px;margin-left: 35px;box-shadow: 5px 5px 5px gray;border-radius: 15px;
-                                                    }
-
-                                                    #aa{
-                                                        font-size:40px ;color:white;text-shadow: 1px 1px 1px black;margin: 10px;text-indent: 30px;margin-bottom:290px;
-                                                    }
-
-                                                    #myself{
-                                                        font-size:20px ;color:#e74c3c ;text-shdow: 1px 1px 1px black;margin-bottom:-90px;text-indent: 30px;text-align: justify;margin: 30px;margin-top:90px;
-                                                    }
+#navbar ol{
+margin:auto;
 
 }
 
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-
-@media only screen and (min-width: 1200px)
- {
-body{
-    backgrund: red;
+#navbar ol li
+{
+list-style:none;
+display:inline-block;
+padding: 15px;
+margin-left:30px;
+border:2px solid #a569bd;
+border-radius: 15px;
+text-align: center;
 }
-#logo{
-        width: 50px;height: 50px;margin: 10px;
-       }
 
-       #in{
-        font-size:50px ;color: #28b463;text-shadow: 1px 1px 1px gray;text-align: center;
-       }
+#navbar ol li:hover
+{
+border-radius:15px;
+background: #7c4791;
+}
 
-       #navbar
-            {
-            backgrund:teal;
-            cursor:pointer;
-            margin-bottom:-30px;
-            }
+#icon
+{
+  background: rgb(0, 0, 0);
+  width:10%;
+  margin-left: 30px;
+  margin-top: -50px;
+}
 
-            #navbar ol{
-                    margin:auto;
-                    width:300px;
-                    margin-top:100px;
-                    }
+#icon :hover
+{
+  color: #a569bd;
+ }
+ .projects 
+    {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-top:-4rem;
+      width: 100%;
+      max-width: 1500px;
+      
+      
+    }
 
-                    #navbar ol li
-                                {
-                                list-style:none;
-                                display:inline-block;
-                                padding:10px;
-                                background:#faf183;
-                                margin-left:-5px;
-                                transition:0.50s;
-                                box-shadow:5px 5px 5px gray;
-                                margin-top:-50px;
-                                }
+    .card 
+     {
+      background: rgba(77, 77, 77, 0.05);
+      border-radius: 20px;
+      padding: 1.5rem;
+      overflow:hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 2px 10px  rgba(190, 190, 190, 0.5);
+    }
 
-                                #navbar ol li:hover
-                                                    {
-                                                   // transform:scale(1.50) rotate(360deg);
-                                                    border-radius:20px;
-                                                    background:#ff5f5f;
+    .card img{
+      width:100%;
+      height:180px;
+      object-fit: cover;
+    }
 
-                                                    }
+    .card:hover {
+      cursor: pointer;
+      transform: translateY(-8px);
+      box-shadow: 0 10px 10px #7c4791;
+    }
 
+    .card a:link
+{
+color:white;
+text-decoration:none;
+transition:0.50s;
+}
 
-
-                                                    #first{
-                                                        background: #f5b7b1;width: 100%;height: 300px;border: 3px ridge black;margin-top: 100px;border-radius: 5px;
-                                                    }
-
-                                                    #second{
-                                                        background:white;width:95%;height:200px;margin-top:-320px;margin-left: 35px;box-shadow: 5px 5px 5px gray;border-radius: 15px;
-                                                    }
-
-                                                    #aa{
-                                                        font-size:40px ;color:white;text-shadow: 1px 1px 1px black;margin: 10px;text-indent: 30px;margin-bottom:-290px;
-                                                    }
-
-                                                    #myself{
-                                                        font-size:20px ;color:#e74c3c  ;text-shdow: 1px 1px 1px black;margin-bottom:-90px;text-indent: 30px;text-align: justify;margin: 30px;margin-top: 90px;
-                                                    }
-	
-} 
-</style>
-<body>
-    <img src="images/p1.png" id="logo">
-
-
-    <h1 id="in">Index</h1>
-
-    <div id="navbar">
-        <ol>
-            <li><a href="#">Home</a></li>
-
-        <li><a href="practice.html">Practice </a></li>
-        
-       
-        
-        <li><a href="myproject.html">project </a></li>
-        
-    
-        
-        </ol>
-    
-        </div>
-
- <div id="first">
-    <h1 id="aa">About Me</h1>
-
- </div>
-
-    
-    <div id="second">
+.card a:visited
+{
+ color: white;
+}
 
 
-        <h1 id="myself">My self <mark>Devika Saini.</mark>I was born on 2nd Mar 2006 in Delhi. I am learning a diploma of <mark>Graphic Design/Web Designing & Development from Arena Animation GTB Nagar.</mark>I am currently learning HTML Language. I gave the exam of metrics in 2020.I did my schooling from St.Anthony's Girls Sr. Sec. School. I am learning of B.com (hons) from D.U (SOL).</h1>
-        
-    </div>
 
-        
+.card p {
+  padding: 0 15px 15px;
+}
 
-
+    .card h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+    }
+     section {
+      min-height: 5vh;
+      padding: 6rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
    
+    section p
+     {
+      text-align: center;
+      font-size: 18px;
+      max-width: 700px;
+      opacity: 0.85;
+    }
+
+    </style>
+
+<body>
+  <div id="header">
+    <div id="p"> <img src="images/p1.png" id="pp"></div>
+    <nav id="navbar">
+      <ol>
+      <li><a href="index 2.html">Home</a></li>
+       <li><a href="resume.html">Resume</a></li>
+      <li><a href="practice.html">Practice</a></li>
+      <li><a href="myproject.html">Projects</a></li>
+      </ol>
+    </nav>
+  </div>
+  <hr style="width: 100%;"/>
+  <div class="box">
+    <h1>Hi, I'm DEVIKA SAINI</h1>
+    <h2 > Graphic & Web Designer</h2>
+    
+    <p id="para">
+           I create modern, responsive, and user-friendly websites that blend clean design<br/> 
+      with powerful functionality. With a strong eye for detail and a drive for<br/> perfection, 
+      I aim to deliver digital experiences that leave a lasting impact.
+    </p>
+    
+       <img src="images/p1.png" id="pic">
+    
+     <div id="icon">
+    <i class="fa-brands fa-instagram" ></i>
+    <i class="fa-brands fa-behance" style="padding:10px;"></i>
+    <i class="fa-brands fa-linkedin"></i>
+       </div>
+      </div>
+ <hr style="width: 100%;"/>
+
+ <h2 style="margin: auto;width: 400px;text-align: center;margin-top:10px;"> Some Practice Work :-</h2>
+   <section id="projects">
+    <div class="projects">
+      <div class="card">
+        
+        <a href="js/loop web photogallery.html" alt="Project1">
+          <img src ="js/images/p8.jpg" >
+        <h3>Web Photogallery</h3>
+        <p>Explore the beauty of nature through this photo gallery.</p>
+        
+      </a>
+      </div>
+      <div class="card">
+        <a href="js/dynamicimages.html" alt="Project2">
+          <img src ="js/images/g1.gif">
+        <h3>Dynamic Image Function</h3>
+        <p>The dynamic image function created using JavaScript makes a ghost image move across the screen.</p>
+        
+      </a>
+      </div>
+      <div class="card">
+        <a href="banner 2.html" alt="Project3">
+          <img src ="images/g2.gif">
+        <h3>Web Banner Animation</h3>
+        <p>A web banner animation makes the webpage more attractive and engaging for viewers.</p>
+        </a>
+      </div>
+
+        <div class="card">
+        <a href="js/keyboard2.html" alt="Project4">
+          <img src ="js/images/eli.gif">
+        <h3>Keyboard Function </h3>
+        <p>A keyboard function animation made with JavaScript, where pressing certain keys triggers an elephant GIF video to move on the webpage</p>
+        </a>
+      </div>
+    </div>
+  </section>
+ <hr style="width: 50%;margin-top:-40px ;"/>
 </body>
 </html>
