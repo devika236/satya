@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.0.3/jquery.cycle.all.min.js" integrity="sha512-T+Pw5KwLzU1wmH5slAFcNK8lstMe+BBEi1qLkM1XIWEPZzcNmuiuUKIdq8ATSUFxx138gAIGsKaq8/ljyElMqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<style>
+#myslider
+{
+    width: 70%;
+    margin: auto;
+    box-shadow: 5px 5px 10px gray;
+ }
+
+.pic
+{
+    height: 100%;
+    width: 100%;
+}
+
+#h1
+{
+    text-align: center;
+    font-size: 50px;
+    color: rgb(226, 170, 101);
+    font-family: verdana;
+}
+</style>
+<body>
+    <h1 id="h1">JQUERY PLUGGINGS</h1>
+ <script>
+  $(document).ready(function()
+{
+    $("#myslider").cycle({fx:'scrollLeft', speed:1000, timeout:  2000});
+})
+ </script> 
+ 
+ <div id="myslider">
+    <img src="images/plug1.jpg" class="pic">
+    <img src="images/plug2.jpg" class="pic">
+    <img src="images/plug3.jpg" class="pic">
+    <img src="images/plug4.jpg" class="pic">
+    <img src="images/plug5.jpeg" class="pic">
+
+ </div>
+</body>
+</html>
