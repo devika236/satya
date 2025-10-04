@@ -13,10 +13,97 @@
 body
 {
 background:rgb(0, 0, 0);
+}
+
+#header
+    {
+      background: black;
+      height:60px;
+      
+    }
+
+ #p
+    {
+        width: 50px;
+        height: 50px;
+        margin: 15px;
+        box-shadow: 0px 0px 8px rgb(255, 255, 255);
+        border-radius: 25px;
+    }
+    #pp
+    {
+       width: 100%;
+       height: 100%;
+    }
+   
+    a:link{color:#ffffff;text-decoration:none}
+    a:visited{color:#ffffff; }
+    a:hover{color:white }
+
+#navbar
+{
+margin-left:1100px;
+margin-top:-70px;
+font-size: 1.5rem;
+font-weight: 600;
+cursor: pointer;
+font-family: 'Montserrat', sans-serif;
+}
+
+#navbar ol{
+margin:auto;
 
 }
 
-nav a:link
+#navbar ol li
+{
+list-style:none;
+display:inline-block;
+padding: 15px;
+margin-left:30px;
+border:2px solid #a569bd;
+border-radius: 15px;
+text-align: center;
+}
+
+#navbar ol li:hover
+{
+border-radius:15px;
+background: #7c4791;
+}
+
+#html
+{
+  height: 220px;
+  background: rgb(0, 0, 0);
+}
+
+#js
+{
+  height: 400px;
+  background: rgb(0, 0, 0);
+}
+#jq
+{
+  height: 400px;
+  background: rgb(0, 0, 0);
+}
+
+      h1 {
+        margin-top: -50px;
+        text-align: center;
+       font-family: 'Montserrat', sans-serif;
+       font-size: 3rem;
+       font-weight: 600;
+       background: #a569bd;
+       width: 500px;
+       margiN:auto;
+       color:white;
+       border-radius: 10px;
+       padding: 5px;
+    }
+
+    nav a:link
 {
 padding:7px;
 color:white;
@@ -43,45 +130,52 @@ nav
 {
 padding:25px;
 margin: 35px;
-
 }
 
-header
+#footer
 {
-color:#a569bd;
-font-family: 'Montserrat', sans-serif;
-text-align:center;
-font-size:70px;
-font-weight: 600;
-}
-#html
-{
-  height: 220px;
-  background: rgb(0, 0, 0);
+  background: rgb(31, 31, 31);
+  height: 150px;
+  color: #eee;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
-#js
+.footer-content a
 {
-  height: 400px;
-  background: rgb(0, 0, 0);
+  text-decoration: none;
+  margin:3px;
+  transition: color 0.3s ease;
 }
-#jq
-{
-  height: 400px;
-  background: rgb(0, 0, 0);
+
+.footer-content a:hover {
+  color:#a569bd;
+}
+
+.social-links {
+  margin-top: 20px;
 }
 </style>
 <body>
+  <div id="header">
+    <div id="p"> <img src="images/p1.png" id="pp"></div>
+    <div id="navbar">
+      <ol>
+      <li><a href="index.html">Home</a></li>
+       <li><a href="resume.html">Resume</a></li>
+      <li><a href="practice.html">Practice</a></li>
+      <li><a href="myproject.html">Projects</a></li>
+      </ol>
+    </div>
+  </div>
+  <hr style="width: 100%;margin-bottom:20px;"/>
+  
+  <h1>PRACTICE WORK</h1>
 
-<header class="animate__animated animate__bounceInDown">
-Practice Page
-</header>
-
- <hr width="100%" size="5" color="white"/>
-
-<h1 style="color:#a569bd;margin-top:30px;font-family: 'Montserrat', sans-serif;margin-left: 30px;font-size: 50px;font-weight:600;">
+<h2 style="color:#a569bd;margin-top:30px;font-family: 'Montserrat', sans-serif;margin-left: 30px;font-size: 50px;font-weight:600;">
   HTML WORK :-
-</h1>
+</h2>
  <hr style="width: 19%;margin-left: 25px;margin-top: -30px;"/>
  <div id="html">
 <nav>
@@ -131,9 +225,9 @@ Practice Page
 </div>
  <hr style="width: 50%;"/>
 
-<h1 style="color:#a569bd;margin-top:30px;font-family: 'Montserrat', sans-serif;margin-left: 30px;font-size: 50px;font-weight:600;">
+<h2 style="color:#a569bd;margin-top:30px;font-family: 'Montserrat', sans-serif;margin-left: 30px;font-size: 50px;font-weight:600;">
 JAVA SCRIPT :-
-</h1>
+</h2>
  <hr style="width: 19%;margin-left: 25px;margin-top: -30px;"/>
  <div id="js">
 <nav>
@@ -231,9 +325,9 @@ JAVA SCRIPT :-
 </nav>
 </div>
  <hr style="width: 50%;"/>
-<h1 style="color:#a569bd;margin-top:30px;font-family: 'Montserrat', sans-serif;margin-left: 30px;font-size: 50px;font-weight:600;">
+<h2 style="color:#a569bd;margin-top:30px;font-family: 'Montserrat', sans-serif;margin-left: 30px;font-size: 50px;font-weight:600;">
 JQUERY :-
-</h1>
+</h2>
  <hr style="width: 13%;margin-left: 25px;margin-top: -30px;"/>
  <div id="jq">
 <nav>
@@ -257,8 +351,26 @@ JQUERY :-
 <br/>
 <br/>
 <br/>
- <hr width="50%" />
+
 </nav>
 </div>
+ <hr style="width: 50%;margin-top: -100px;"/>
+
+<div id="footer">
+  <div class="footer-content">
+    <p>© 2025 Devika Saini</p>
+    <p>Designed & Developed by Devika Saini</p>
+    <p>
+      📍 Based in Delhi | ✉️ 
+      <a href="mailto:devikasaini0111@gmail.com">devikasaini0111@gmail.com</a>
+    </p>
+    <div class="social-links">
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> | 
+      <a href="https://github.com/yourprofile" target="_blank">Behance</a> | 
+      <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
