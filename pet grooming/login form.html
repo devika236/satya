@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+
+<head><title>LOGIN</title>
+</head>
+
+<style>
+*{
+margin:0;
+paddingt:0;
+}
+
+body
+{
+background:#82e4fc;
+}
+
+#main
+{
+width:50%;
+margin:auto;
+text-align:center;
+margin-top:50px;
+padding:20px;
+}
+
+table
+{
+width:90%;
+margin:auto;
+border:10px ridge #0009c8;
+border-radius:5px;
+margin-top:10px;
+}
+
+input[type="text"],[type="password"]{width:100%;height:30px;}
+input[type="submit"],[type="reset"]{width:30%;margin:20px;height:50px;
+background:#0009c8;color:#ffffff;}
+
+
+
+/*   Media Query  */
+
+ /* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px)
+ {
+
+    #main
+{
+width:90%;
+}
+
+ }
+
+ /*  Small devices (portrait tablets and large phones, 600px and up)  */
+
+@media only screen and (min-width: 600px) 
+{
+     #main
+{
+width:90%;
+}   
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px)
+ {
+         #main
+{
+width:90%;
+}   
+
+}
+
+ /* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px)
+ {
+             #main
+{
+width:80%;
+}   
+
+ }
+
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px)
+ {
+             #main
+{
+width:60%;
+}   
+
+ }
+</style>
+
+<header> </header>
+<tr><td></td></tr>
+
+<body>
+<div id="main">
+<table border="0" cellpadding="10px" >
+<caption style="font-size:40px;margin:10px;color:#0009c8;">LOGIN FORM
+</caption>
+
+<form action="https://tataplay/user/get.php" method="get">
+
+<tr>
+<td>
+<label for="userid">User Id</lable>
+</td>
+
+<td>
+<input id="userid" type="text" placeholder="Type login id..." 
+required title="type login id">
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="password">Password</lable>
+</td>
+
+<td>
+<input id="password" type="text" placeholder="Type password..." 
+required title="type password here">
+</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>
+<input type="submit" value="LOGIN">
+<input type="reset">
+</td>
+</tr>
+
+</form>
+</table>
+</div>
+
+</body>
+</html>
