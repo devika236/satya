@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<style>
+#main
+{
+    background: black;
+    width: 200px;
+    padding-top: 10px;
+    box-shadow: 2px 2px 5px gray;
+    display:none;
+}
+
+#menu
+{
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+.m
+{
+    margin: auto;
+    list-style: none;
+    padding: 0px;
+    text-align: center;
+    width: 200px;
+    transition: 2s;
+    font-size: 20px;
+}
+
+.m li
+{
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.m li:hover
+{
+  transition: 2s;
+  background: palevioletred;
+  color: white;
+}
+
+.m a:link
+{
+    text-decoration: none;
+    color: white;
+}
+
+.m a:visited
+{
+    text-decoration: none;
+    color: white;
+    text-align: left;
+}
+
+#productsub,#datasub
+{
+    position: absolute;
+    list-style: none;
+    left: 210px;
+    background: black;
+    padding: 0px;
+    color: white;
+    display: none;
+}
+
+h1
+{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(255, 90, 117);
+}
+</style>
+<body>
+<script>
+    $(document).ready(function()
+{
+    $("#menu").click(function()
+     {
+        $("#main").slideToggle()   
+     });
+
+         $("#myproducts").click(function()
+     {
+        $("#productsub").slideToggle() 
+        $("datasub").hide(1000) 
+     });
+
+     $("#data").click(function()
+     {
+        $("#datasub").slideToggle() 
+        $("productsub").slideUp(1000) 
+     });
+})
+</script>
+<h1> Creating Menu Using Jquery</h1>
+</h1>
+  <button id="menu">Menu</button>  
+   <div id="main">
+    <ol class="m">
+        <li><a href="#">Home</a></li>
+         <li><a id="myproducts" href="#">Product</a>
+            <ol id="productsub">
+                <li>Home Appliances</li>
+                <li>Detergent</li>
+                <li>Oil</li>
+                <li>Dye</li>
+            </ol>
+        </li>
+        <li><a href="#">Services</a></li>
+        <li><a id="data" href="#">Data</a>
+            <ol id="datasub">
+                <li>Book Data</li>
+                <li>Electronic</li>
+                <li>Hardware</li>
+                <li>Employee</li>
+            </ol>
+        </li>
+          <li><a href="#">Photogallery</a></li>
+           <li><a href="#">Contact</a></li>
+    </ol>
+   </div>
+
+</body>
+</html>
