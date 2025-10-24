@@ -42,51 +42,50 @@ header {
   padding: 0.5rem;
   border-end-end-radius: 30px;
   border-bottom-left-radius: 30px;
-}
+ }
 
     a:link{color:white;text-decoration:none}
-    a:visited{color:rgb(255, 255, 255)}
-     a:hover{color:var( --secondary-color)} 
+    a:visited{color:white}
+    a:hover{color: #1C3AA9} 
 
-    #navbar
+    nav
 {
-margin-left:1120px;
+margin-left:1150px;
 font-size: 1.5rem;
 font-weight: 600;
 margin-top: -70px;
 }
 
 
-#navbar ol li
+nav ol li
 {
 list-style:none;
 display:inline-block;
-padding: 7px;
-margin-left:20px;
+padding: 8px;
+margin-left:15px;
 border:2px solid #D0D7E2;
 border-radius: 15px;
 text-align: center;
 background: transparent;
-cursor: pointer;
 transition: background 0.3s ease-out, color 0.3s ease-out, border 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
 
-#navbar ol li:hover
+nav ol li:hover
 {
 border-radius:15px;
 background:white; 
-color: var( --secondary-color);
 border-color: white; 
 box-shadow:2px 2px 5px #252525;
 transition: color 0.3s ease-out; 
+cursor: pointer;
 }
 
 #pp
 {
    color: rgb(255, 187, 0);
    font-size: 20px;
-   margin-top: -40px;
+   margin-top: -50px;
    margin-left: 20px;
 }
 
@@ -256,7 +255,7 @@ height:2120px;
         
 #four
 {
-height:500px;
+height:24 00px;
   background: white;
   border: 1px solid  #D0D7E2;
   border-radius: 12px;
@@ -264,4 +263,50 @@ height:500px;
   padding: 1.5rem;
   margin: 1rem;
 
+}
+
+.goal-block {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    max-width: 1000px; /* Limit width for readability */
+    margin: 50px auto; /* Center the block */
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* For rounded corners */
+    text-align: left;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.goal-block:hover {
+ transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.goal-block .card-image-container { 
+    flex-shrink: 0; 
+    width: 50%; 
+    height: 500px; 
+    border-radius: 15px;
+    margin: auto;
+    margin-left: 20px;
+}
+.goal-block:nth-child(even) .card-image-container { 
+    border-radius: 15px; 
+    order: 1; 
+}
+
+.goal-block .card-content { 
+    flex-grow: 1; 
+    padding: 40px; 
+}
+
+.goal-block h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.goal-block:nth-child(even) { 
+    flex-direction: row-reverse; 
 }
