@@ -6,6 +6,10 @@
             --bg-light: #F9F9F9;     
 }
 
+html
+{
+     scroll-behavior: smooth;
+}
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -36,28 +40,28 @@
             border-radius: 2px;
         }
         
-header {
-  background-color: var( --secondary-color);
+    header {
+  background-color:#1C3AA9;
   color: white;
   padding: 0.5rem;
   border-end-end-radius: 30px;
   border-bottom-left-radius: 30px;
  }
 
-    a:link{color:white;text-decoration:none}
-    a:visited{color:white}
-    a:hover{color: #1C3AA9} 
+    a:link{color:rgb(255, 255, 255);text-decoration:none}
+    a:visited{color:rgb(255, 255, 255);}
+    a:hover{color: #1C3AA9;} 
 
     nav
 {
 margin-left:1150px;
+margin-top: -50px;
 font-size: 1.5rem;
 font-weight: 600;
-margin-top: -70px;
 }
 
 
-nav ol li
+nav ul li
 {
 list-style:none;
 display:inline-block;
@@ -71,24 +75,24 @@ transition: background 0.3s ease-out, color 0.3s ease-out, border 0.3s ease-out,
 }
 
 
-nav ol li:hover
+nav ul li:hover
 {
+cursor: pointer;    
 border-radius:15px;
 background:white; 
 border-color: white; 
 box-shadow:2px 2px 5px #252525;
 transition: color 0.3s ease-out; 
-cursor: pointer;
+ transform: scale(1.05);
 }
 
 #pp
 {
    color: rgb(255, 187, 0);
    font-size: 20px;
-   margin-top: -50px;
+   margin-top: -40px;
    margin-left: 20px;
 }
-
 #one
 {
 height: 450px;
@@ -228,7 +232,7 @@ height:2120px;
             color: #1C3AA9;
             margin-left:410px;
             margin-top: 20px;
-            background: rgba(0, 191, 166, 0.1);
+            background: rgba(0, 191, 166, 0.144);
             padding: 8px;
             border-radius: 50%;
             display: inline-block;
@@ -255,7 +259,7 @@ height:2120px;
         
 #four
 {
-height:24 00px;
+height:2800px;
   background: white;
   border: 1px solid  #D0D7E2;
   border-radius: 12px;
@@ -309,4 +313,114 @@ height:24 00px;
 
 .goal-block:nth-child(even) { 
     flex-direction: row-reverse; 
+}
+
+#five
+{
+height: 700px;
+  background: white;
+  border: 1px solid  #D0D7E2;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  margin: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.contact-info, .feedback-form {
+  flex: 1 1 350px;
+  max-width: 450px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 16px;
+ box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-info:hover, .feedback-form:hover {
+   transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.contact-info h2, .feedback-form h2 {
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  font-size: 1.6em;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  font-size: 1em;
+  color: var(--text-dark);
+}
+
+.contact-info i {
+  color:white;
+  margin-right: 10px;
+  background-color: var(--secondary-color);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+ display:inline-block;
+   margin: 10px;
+  padding: 10px;
+  border-radius: 50px;
+  transition: background 0.3s ease,transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.25);
+}
+
+.feedback-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(128, 128, 128, 0.137);
+  border-radius: 8px;
+  color: var(--text-dark);
+  padding: 12px;
+  font-size: 1em;
+}
+
+.feedback-form input::placeholder,
+.feedback-form textarea::placeholder {
+  color: var(--text-light);
+}
+
+.feedback-form button {
+  background:var(--secondary-color);
+  border:none;
+  color: white;
+  padding: 12px;
+  border-radius: 15px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.feedback-form button:hover {
+  background: rgb(0, 0, 167);
+  transform: scale(1.05);
 }
