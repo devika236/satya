@@ -1,158 +1,150 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devika Saini - Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  </head>
   <style>
-    body
-    {
-      background: rgb(0, 0, 0);
-    
-        }
-    #header
-    {
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
       background: black;
-      height:60px;
-      
-    }
-    .box {
-       padding: 20px;
-      background-color:black;
-      text-align: center;
-      height: 350px;
       color: white;
-      font-size: 30px;
-      margin-top: 10px;
-    }
-    
-    h1 {
+      margin: 0;
+      padding: 0;
       font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      margin-top:0px;
-      color:white;
-      margin-left: -1200px;
     }
 
-    h2 {
-       font-family: 'Montserrat', sans-serif;
-       font-size: 2rem;
-       font-weight: 600;
-       background: #a569bd;
-       width: 450px;
-       margin-top: -20px;
-       margin-left: 20px;
-       color:white;
-       border-radius: 10px;
-       padding: 5px;
-    }
-     
- 
-    #para
-    {
-      font-family: 'Montserrat', sans-serif;
-      text-align: justify;
-      font-size: 25px;
-      padding: 10px;
-      margin-left: 20px;
+    #header {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      flex-wrap: wrap;
     }
 
-
-    #pic
-    {
-      margin-left: 1000px;
-      width:17%;
-      margin-top: -1000px;
+    #p {
+      width: 50px;
+      height: 50px;
+      box-shadow: 0px 0px 8px white;
+      border-radius: 25px;
+      overflow: hidden;
     }
-    #p
-    {
-        width: 50px;
-        height: 50px;
-        margin: 15px;
-        box-shadow: 0px 0px 8px rgb(255, 255, 255);
-        border-radius: 25px;
-    }
-    #pp
-    {
-       width: 100%;
-       height: 100%;
-    }
-   
-       a:link{color:#ffffff;text-decoration:none}
-    a:visited{color:#ffffff; }
-    a:hover{color:white }
 
-    #navbar
-{
-margin-left:1100px;
-margin-top:-70px;
-font-size: 1.5rem;
-font-weight: 600;
-cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
-}
-
-#navbar ol{
-margin:auto;
-
-}
-
-#navbar ol li
-{
-list-style:none;
-display:inline-block;
-padding: 15px;
-margin-left:30px;
-border:2px solid #a569bd;
-border-radius: 15px;
-text-align: center;
-}
-
-#navbar ol li:hover
-{
-border-radius:15px;
-background: #7c4791;
-}
-
-#icon
-{
-  background: rgb(0, 0, 0);
-  width:10%;
-  margin-left: 30px;
-  margin-top: -50px;
-}
-
-#icon :hover
-{
-  color: #a569bd;
- }
- .projects 
-    {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 3rem;
-      margin-top:-4rem;
+    #pp {
       width: 100%;
-      max-width: 1400px;
-      
-      
+      height: 100%;
     }
 
-    .card 
-     {
-      background: rgba(77, 77, 77, 0.05);
-      border-radius: 20px;
-      padding: 1.5rem;
-      overflow:hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-      box-shadow: 0 2px 10px  rgba(190, 190, 190, 0.5);
+    #navbar {
+      display: flex;
+      flex-wrap: wrap;
     }
 
-    .card img{
-      width:100%;
-      height:180px;
-      object-fit: cover;
+    #navbar ol {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
+    }
+
+    #navbar ol li {
+      list-style: none;
+      padding: 10px 15px;
+      margin: 5px;
+      border: 2px solid #a569bd;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    #navbar ol li:hover {
+      background: #7c4791;
+    }
+
+    #navbar a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .box {
+      padding: 20px;
+      text-align: center;
+      }
+
+    .box h1 {
+      font-size: 2.2rem;
+      margin: 0;
+    }
+
+    .box h2 {
+      background: #a569bd;
+      display: inline-block;
+      padding: 5px 15px;
+      border-radius: 10px;
+      margin: 10px 0;
+      font-size: 1.5rem;
+    }
+
+    #para {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: auto;
+      text-align:center;
+      padding: 10px;
+    }
+
+    #pic {
+      width: 200px;
+      max-width: 80%;
+      margin: 30px auto;
+      display: block;
+    }
+
+    #icon {
+      margin-top: 20px;
+      font-size: 1.5rem;
+    }
+
+    #icon i {
+      margin: 0 10px;
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    #icon i:hover {
+      color: #a569bd;
+    }
+
+    h2.section-title {
+      margin: auto;
+      margin-top: 30px;
+      width: fit-content;
+      padding: 10px 20px;
+      background: #a569bd;
       border-radius: 10px;
     }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(77, 77, 77, 0.1);
+      border-radius: 20px;
+      padding: 1rem;
+      box-shadow: 0 2px 10px rgba(190, 190, 190, 0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+          }
 
     .card:hover {
       cursor: pointer;
@@ -160,7 +152,7 @@ background: #7c4791;
       box-shadow: 0 10px 10px #7c4791;
     }
 
-    .card a:link
+        .card a:link
 {
 color:white;
 text-decoration:none;
@@ -172,147 +164,187 @@ transition:0.50s;
  color: white;
 }
 
-
-
-.card p {
-  padding: 0 15px 15px;
-}
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
 
     .card h3 {
-      margin-bottom: 0.5rem;
-      font-size: 1.3rem;
+      margin: 0.8rem 0 0.4rem;
+      font-size: 1.2rem;
     }
-     section {
-      min-height: 5vh;
-      padding: 6rem 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    section {
       text-align: center;
     }
+
+    #footer {
+      background: rgb(31, 31, 31);
+      color: #eee;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .footer-content a {
+      text-decoration: none;
+      color: white;
+      margin: 0 5px;
+    }
+
+    .footer-content a:hover {
+      color: #a569bd;
+    }
+
+    /* Responsive Adjustments */
+    @media screen and (max-width: 768px) {
+      #navbar {
+        justify-content: center;
+        margin-top: 10px;
+        margin-left: 3.15px;
+      }
+      
+       #p {
+      margin-left: -10px;
+    }
+
    
-    section p
-     {
-      text-align: center;
-      font-size: 18px;
-      opacity: 0.85;
-      max-width: 700px;
+      .box h1 {
+        font-size: 1.8rem;
+      }
+
+      .box h2 {
+        font-size: 1.2rem;
+      }
+
+      #para {
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      #icon {
+        font-size: 1.2rem;
+      }
+
+      .card h3 {
+        font-size: 1rem;
+      }
+
+      #pic {
+        width: 150px;
+      }
     }
 
-#footer
-{
-  background: rgb(31, 31, 31);
-  height: 150px;
-  color: #eee;
-  text-align: center;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-}
+    @media screen and (max-width: 480px) {
+      .box h1 {
+        font-size: 1.5rem;
+      }
 
-.footer-content a
-{
-  text-decoration: none;
-  margin:3px;
-  transition: color 0.3s ease;
-}
+      #navbar ol {
+        flex-direction: column;
+        align-items: center;
+      }
 
-.footer-content a:hover {
-  color:#a569bd;
-}
-
-.social-links {
-  margin-top: 20px;
-}
-
-</style>
+      #navbar ol li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
 
 <body>
   <div id="header">
-    <div id="p"> <img src="images/p1.png" id="pp"></div>
+    <div id="p">
+      <img src="images/p1.png" id="pp" alt="Logo">
+    </div>
     <nav id="navbar">
       <ol>
-      <li><a href="index.html">Home</a></li>
-       <li><a href="resume.html">Resume</a></li>
-      <li><a href="practice.html">Practice</a></li>
-      <li><a href="myproject.html">Projects</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="myproject.html">Projects</a></li>
       </ol>
     </nav>
   </div>
-  <hr style="width: 100%;"/>
+
+  <hr style="width: 100%;" />
+
   <div class="box">
     <h1>Hi, I'm DEVIKA SAINI</h1>
-    <h2 > Graphic & Web Designer</h2>
-    
+    <h2>Graphic & Web Designer</h2>
     <p id="para">
-           I create modern, responsive, and user-friendly websites that blend clean design<br/> 
-      with powerful functionality. With a strong eye for detail and a drive for<br/> perfection, 
-      I aim to deliver digital experiences that leave a lasting impact.
+      I create modern, responsive, and user-friendly websites that blend clean design
+      with powerful functionality. With a strong eye for detail and a drive for
+      perfection, I aim to <br/>deliver digital experiences that leave a lasting impact.
     </p>
-    
-       <img src="images/p1.png" id="pic">
-    
-     <div id="icon">
-    <i class="fa-brands fa-instagram" ></i>
-    <i class="fa-brands fa-behance" style="padding:10px;"></i>
-    <i class="fa-brands fa-linkedin"></i>
-       </div>
-      </div>
-   <hr style="width: 100%;margin-bottom:20px;"/>
+    <img src="images/p1.png" id="pic" alt="Devika">
+    <div id="icon">
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-behance" style="padding:10px;"></i>
+      <i class="fa-brands fa-linkedin"></i>
+    </div>
+  </div>
 
- <h2 style="margin: auto;width: 400px;text-align: center;margin-top:10px;"> Some Practice Work :-</h2>
-   <section id="projects">
+  <hr style="width: 100%; margin-bottom: 20px;" />
+
+  <h2 class="section-title">Some Practice Work :-</h2>
+
+  <section id="projects">
     <div class="projects">
       <div class="card">
-        
-        <a href="js/loop web photogallery.html" alt="Project1">
-          <img src ="js/images/p8.jpg" >
-        <h3>Web Photogallery</h3>
-        <p>Explore the beauty of nature through this photo gallery.</p>
-        
-      </a>
-      </div>
-      <div class="card">
-        <a href="js/dynamicimages.html" alt="Project2">
-          <img src ="js/images/g1.gif">
-        <h3>Dynamic Image Function</h3>
-        <p>The dynamic image function created using JavaScript makes a ghost image move across the screen.</p>
-        
-      </a>
-      </div>
-      <div class="card">
-        <a href="banner 2.html" alt="Project3">
-          <img src ="images/g2.gif">
-        <h3>Web Banner Animation</h3>
-        <p>A web banner animation makes the webpage more attractive and engaging for viewers.</p>
+        <a href="js/loop web photogallery.html">
+          <img src="js/images/p8.jpg" alt="Project 1">
+          <h3>Web Photogallery</h3>
+          <p>Explore the beauty of nature through this photo gallery.</p>
         </a>
       </div>
-
-        <div class="card">
-        <a href="js/keyboard2.html" alt="Project4">
-          <img src ="js/images/eli.gif">
-        <h3>Keyboard Function </h3>
-        <p>A keyboard function animation made with JavaScript, where pressing certain keys triggers an elephant GIF video to move on the webpage</p>
+      <div class="card">
+        <a href="js/dynamicimages.html">
+          <img src="js/images/g1.gif" alt="Project 2">
+          <h3>Dynamic Image Function</h3>
+          <p>Ghost image moves dynamically using JavaScript animation.</p>
+        </a>
+      </div>
+      <div class="card">
+        <a href="banner 2.html">
+          <img src="images/g2.gif" alt="Project 3">
+          <h3>Web Banner Animation</h3>
+          <p>Animated web banners to engage visitors interactively.</p>
+        </a>
+      </div>
+      <div class="card">
+        <a href="js/keyboard2.html">
+          <img src="js/images/eli.gif" alt="Project 4">
+          <h3>Keyboard Function</h3>
+          <p>Press keys to trigger animations on the page (Elephant GIF).</p>
         </a>
       </div>
     </div>
   </section>
- <hr style="width: 50%;margin-top:-40px ;"/>
 
-<div id="footer">
-  <div class="footer-content">
-    <p>© 2025 Devika Saini</p>
-    <p>Designed & Developed by Devika Saini</p>
-    <p>
-      📍 Based in Delhi | ✉️ 
-      <a href="mailto:devikasaini0111@gmail.com">devikasaini0111@gmail.com</a>
-    </p>
-    <div class="social-links">
-      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> | 
-      <a href="https://github.com/yourprofile" target="_blank">Behance</a> | 
-      <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
+  <hr style="width: 50%; margin-top: 0px;" />
+
+  <div id="footer">
+    <div class="footer-content">
+      <p>© 2025 Devika Saini</p>
+      <p>Designed & Developed by Devika Saini</p>
+      <p>📍 Based in Delhi | ✉️ 
+        <a href="mailto:devikasaini0111@gmail.com">devikasaini0111@gmail.com</a>
+      </p>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/yourprofile" target="_blank">Behance</a> |
+        <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
+      </div>
     </div>
   </div>
-</div>
-
 </body>
 </html>

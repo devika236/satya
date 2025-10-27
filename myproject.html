@@ -7,96 +7,96 @@
 </head>
 
 <style>
-body
-{
-background:black;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-#header
-    {
+    body {
       background: black;
-      height:60px;
-      
+      color: white;
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
     }
 
- #p
-    {
-        width: 50px;
-        height: 50px;
-        margin: 15px;
-        box-shadow: 0px 0px 8px rgb(255, 255, 255);
-        border-radius: 25px;
+    #header {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      flex-wrap: wrap;
     }
-    #pp
-    {
-       width: 100%;
-       height: 100%;
+
+    #p {
+      width: 50px;
+      height: 50px;
+      box-shadow: 0px 0px 8px white;
+      border-radius: 25px;
+      overflow: hidden;
     }
-   
-    a:link{color:#ffffff;text-decoration:none}
-    a:visited{color:#ffffff; }
-    a:hover{color:white }
 
-#navbar
-{
-margin-left:1100px;
-margin-top:-70px;
-font-size: 1.5rem;
-font-weight: 600;
-cursor: pointer;
-font-family: 'Montserrat', sans-serif;
-}
-
-#navbar ol{
-margin:auto;
-
-}
-
-#navbar ol li
-{
-list-style:none;
-display:inline-block;
-padding: 15px;
-margin-left:30px;
-border:2px solid #a569bd;
-border-radius: 15px;
-text-align: center;
-}
-
-#navbar ol li:hover
-{
-border-radius:15px;
-background: #7c4791;
-}
-
- .projects 
-    {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 3rem;
-      margin-top:-4rem;
+    #pp {
       width: 100%;
-      max-width: 1100px;
-      
-      
+      height: 100%;
     }
 
-    .card 
-     {
-      background: rgba(77, 77, 77, 0.05);
-      border-radius: 20px;
-      padding: 1.5rem;
-      overflow:hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-      box-shadow: 0 2px 10px  rgba(190, 190, 190, 0.5);
+    #navbar {
+      display: flex;
+      flex-wrap: wrap;
     }
 
-    .card img{
-      width:100%;
-      height:180px;
-      object-fit: cover;
+    #navbar ol {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
+    }
+
+    #navbar ol li {
+      list-style: none;
+      padding: 10px 15px;
+      margin: 5px;
+      border: 2px solid #a569bd;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    #navbar ol li:hover {
+      background: #7c4791;
+    }
+
+    #navbar a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    h2.section-title {
+      margin: auto;
+      margin-top: 30px;
+      width: fit-content;
+      padding: 10px 20px;
+      background: #a569bd;
       border-radius: 10px;
     }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(77, 77, 77, 0.1);
+      border-radius: 20px;
+      padding: 1rem;
+      box-shadow: 0 2px 10px rgba(190, 190, 190, 0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+          }
 
     .card:hover {
       cursor: pointer;
@@ -104,7 +104,7 @@ background: #7c4791;
       box-shadow: 0 10px 10px #7c4791;
     }
 
-    .card a:link
+        .card a:link
 {
 color:white;
 text-decoration:none;
@@ -116,78 +116,90 @@ transition:0.50s;
  color: white;
 }
 
-
-
-.card p {
-  padding: 0 15px 15px;
-}
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
 
     .card h3 {
-      margin-bottom: 0.5rem;
-      font-size: 1.3rem;
-    }
-     section {
-      min-height: 5vh;
-      padding: 6rem 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-   
-    section p
-     {
-      text-align: center;
-      font-size: 18px;
-      max-width: 700px;
-      opacity: 0.85;
+      margin: 0.8rem 0 0.4rem;
+      font-size: 1.2rem;
     }
 
-      h1 {
-        margin-top: -50px;
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    section {
+      text-align: center;
+    }
+
+    #footer {
+      background: rgb(31, 31, 31);
+      color: #eee;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .footer-content a {
+      text-decoration: none;
+      color: white;
+      margin: 0 5px;
+    }
+
+    .footer-content a:hover {
+      color: #a569bd;
+    }
+
+        h1.section-title {
+      margin: auto;
+      margin-top: 30px;
+      width: fit-content;
+      padding: 10px 20px;
+      background: #a569bd;
+      border-radius: 10px;
+    }
+    /* Responsive Adjustments */
+    @media screen and (max-width: 768px) {
+      #navbar {
+        justify-content: center;
+        margin-top: 10px;
+         margin-left: 3.15px;
+      }
+
+      #p {
+      margin-left: -10px;
+    }
+
+      .card h3 
+      {
+        font-size: 1rem;
+      }
+
+    }
+
+    @media screen and (max-width: 480px) {
+        #navbar ol {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #navbar ol li {
+        margin: 10px 0;
+        width: 100%;
         text-align: center;
-       font-family: 'Montserrat', sans-serif;
-       font-size: 3rem;
-       font-weight: 600;
-       background: #a569bd;
-       width: 300px;
-       margiN:auto;
-       color:white;
-       border-radius: 10px;
-       padding: 5px;
+      }
     }
-
-    #footer
-{
-  background: rgb(31, 31, 31);
-  height: 150px;
-  color: #eee;
-  text-align: center;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-}
-
-.footer-content a
-{
-  text-decoration: none;
-  margin:3px;
-  transition: color 0.3s ease;
-}
-
-.footer-content a:hover {
-  color:#a569bd;
-}
-
-.social-links {
-  margin-top: 20px;
-}
 </style>
 <body>
   <div id="header">
     <div id="p"> <img src="images/p1.png" id="pp"></div>
     <nav id="navbar">
       <ol>
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index 2.html">Home</a></li>
        <li><a href="resume.html">Resume</a></li>
       <li><a href="practice.html">Practice</a></li>
       <li><a href="myproject.html">Projects</a></li>
@@ -196,7 +208,7 @@ transition:0.50s;
   </div>
   <hr style="width: 100%;margin-bottom:20px;"/>
   
-  <h1>PROJECTS</h1>
+  <h1 class="section-title">PROJECTS</h1>
      <section id="projects">
     <div class="projects">
       <div class="card">
@@ -226,7 +238,7 @@ transition:0.50s;
 
       </div>
   </section>
- <hr style="width: 50%;margin-top:-40px ;"/>
+ <hr style="width: 50%;margin-top:110px ;"/>
 
  <div id="footer">
   <div class="footer-content">
