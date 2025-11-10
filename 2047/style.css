@@ -361,8 +361,8 @@ height: 700px;
 .contact-info p {
   margin: 10px 0;
   font-size: 1em;
-  color: var(--text-dark);
-}
+  color: var(--text-dark);text-align: start;
+ }
 
 .contact-info i {
   color:white;
@@ -370,6 +370,7 @@ height: 700px;
   background-color: var(--secondary-color);
   padding: 10px;
   border-radius: 50%;
+  justify-content: left;
 }
 
 .social-icons {
