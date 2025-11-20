@@ -1,366 +1,274 @@
-<!doctype html>
-<html>
-
-<head> <title>Practice Page</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 
- <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-
 <style>
-body
-{
-background:rgb(0, 0, 0);
+
+* {
+  box-sizing: border-box;
 }
 
-#header
-    {
-      background: black;
-      height:60px;
-      
-    }
-
- #p
-    {
-        width: 50px;
-        height: 50px;
-        margin: 15px;
-        box-shadow: 0px 0px 8px rgb(255, 255, 255);
-        border-radius: 25px;
-    }
-    #pp
-    {
-       width: 100%;
-       height: 100%;
-    }
-   
-    a:link{color:#ffffff;text-decoration:none}
-    a:visited{color:#ffffff; }
-    a:hover{color:white }
-
-#navbar
-{
-margin-left:1100px;
-margin-top:-70px;
-font-size: 1.5rem;
-font-weight: 600;
-cursor: pointer;
-font-family: 'Montserrat', sans-serif;
+body {
+  background: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
-#navbar ol{
-margin:auto;
-
+/* HEADER SECTION */
+#header {
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  flex-wrap: wrap;
 }
 
-#navbar ol li
-{
-list-style:none;
-display:inline-block;
-padding: 15px;
-margin-left:30px;
-border:2px solid #a569bd;
-border-radius: 15px;
-text-align: center;
+#p {
+  width: 50px;
+  height: 50px;
+  box-shadow: 0px 0px 8px white;
+  border-radius: 25px;
+  overflow: hidden;
 }
 
-#navbar ol li:hover
-{
-border-radius:15px;
-background: #7c4791;
+#pp {
+  width: 100%;
+  height: 100%;
 }
 
-#html
-{
-  height: 220px;
-  background: rgb(0, 0, 0);
+/* NAVBAR MAIN */
+#navbar {
+  display: flex;
 }
 
-#js
-{
-  height: 400px;
-  background: rgb(0, 0, 0);
-}
-#jq
-{
-  height: 400px;
-  background: rgb(0, 0, 0);
+#navbar ol {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
 }
 
-      h1 {
-        margin-top: -50px;
-        text-align: center;
-       font-family: 'Montserrat', sans-serif;
-       font-size: 3rem;
-       font-weight: 600;
-       background: #a569bd;
-       width: 500px;
-       margiN:auto;
-       color:white;
-       border-radius: 10px;
-       padding: 5px;
-    }
-
-    nav a:link
-{
-padding:7px;
-color:white;
-text-decoration:none;
-margin-right:100px;
-font-size: 25px;
-border:1.5px solid #9b59b6;
-border-radius: 10px;
+#navbar ol li {
+  list-style: none;
+  padding: 10px 15px;
+  border: 2px solid #a569bd;
+  border-radius: 15px;
+  transition: 0.3s;
 }
 
-nav a:visited
-{
-color:white;
-border:1px solid #9b59b6;
+#navbar ol li:hover {
+  background: #7c4791;
 }
 
-nav a:hover
-{
-background:#7c4791;
-color: white;
+#navbar a {
+  color: white;
+  text-decoration: none;
 }
 
-nav
-{
-padding:25px;
-margin: 35px;
+/* CONTAINER */
+.container {
+  max-width: 1300px;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
 }
 
-#footer
-{
+/* SECTION TITLE */
+h1.section-title {
+  margin: auto;
+  margin-top: 30px;
+  width: fit-content;
+  padding: 10px 20px;
+  background: #a569bd;
+  border-radius: 10px;
+}
+
+/* SUBHEADING */
+h2 {
+  padding: 10px 20px;
+  font-size: 30px;
+}
+
+/* LINKS BLOCK */
+#link {
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+ }
+
+#link a {
+  padding: 7px 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border: 1px solid #9b59b6;
+  border-radius: 10px;
+}
+
+#link a:hover {
+  background: #7c4791;
+}
+
+/* FOOTER */
+#footer {
   background: rgb(31, 31, 31);
-  height: 150px;
   color: #eee;
   text-align: center;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  padding: 30px 20px;
 }
 
-.footer-content a
-{
+.footer-content a {
   text-decoration: none;
-  margin:3px;
-  transition: color 0.3s ease;
+  color: white;
+  margin: 0 5px;
 }
 
 .footer-content a:hover {
-  color:#a569bd;
+  color: #a569bd;
 }
 
-.social-links {
-  margin-top: 20px;
+/* RESPONSIVE — TABLET */
+@media screen and (max-width: 768px) {
+  #header {
+    justify-content:left;
+  }
+
+  #navbar ol {
+    justify-content: center;
+        margin-top: 10px;
+         margin-left: 3.15px;
+  }
 }
+
+/* RESPONSIVE — MOBILE */
+@media screen and (max-width: 480px) {
+  #navbar ol {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  #navbar ol li {
+    width: 90%;
+    text-align: center;
+  }
+
+  #link {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #link a {
+    width: 90%;
+    text-align: center;
+  }
+}
+
 </style>
 <body>
   <div id="header">
     <div id="p"> <img src="images/p1.png" id="pp"></div>
-    <div id="navbar">
+    <nav id="navbar">
       <ol>
       <li><a href="index.html">Home</a></li>
        <li><a href="resume.html">Resume</a></li>
       <li><a href="practice.html">Practice</a></li>
       <li><a href="myproject.html">Projects</a></li>
       </ol>
-    </div>
+    </nav>
   </div>
   <hr style="width: 100%;margin-bottom:20px;"/>
   
-  <h1>PRACTICE WORK</h1>
+  <h1 class="section-title">PRACTICE WORK</h1>
 
-<h2 style="color:#a569bd;margin-top:30px;font-family: 'Montserrat', sans-serif;margin-left: 30px;font-size: 50px;font-weight:600;">
-  HTML WORK :-
-</h2>
- <hr style="width: 19%;margin-left: 25px;margin-top: -30px;"/>
- <div id="html">
-<nav>
-<a href="index 2.html">HOME</a>
-
-
+  <div class="container">
+<h2> HTML :- </h2>
+ <hr style="width: 15%;margin-left: 0px;margin-top: -30px;"/>
+ <nav id="link">
 <a href="first.html">FIRST CLASS</a>
-
-
 <a href="photo gallery.html">PHOTO GALLERY</a>
-
-
 <a href="list.html">LIST IN HTML</a>
-
-
 <a href="menu.html">MENU</a>
-
 <a href="table.html">TABLE</a>
-
-
 <a href="login form.html">LOGIN FORM</a>
-<br/>
-<br/>
-<br/>
-
 <a href="registration form.html">REGISTRATION FORM</a>
-
-
 <a href="menu2.html">ANIMATION</a>
-
-
 <a href="banner.html">WEB BANNER</a>
-
 <a href="banner 2.html">WEB BANNER 2</a>
-
-
 <a href="media.html">MEDIA IN HTML</a>
-<br/>
-<br/>
-<br/>
-
 <a href="media2.html">MEDIA IN HTML 2</a>
-<br/>
-<br/>
-
-</nav>
+ </nav>
 </div>
  <hr style="width: 50%;"/>
 
-<h2 style="color:#a569bd;margin-top:30px;font-family: 'Montserrat', sans-serif;margin-left: 30px;font-size: 50px;font-weight:600;">
-JAVA SCRIPT :-
-</h2>
- <hr style="width: 19%;margin-left: 25px;margin-top: -30px;"/>
- <div id="js">
-<nav>
-
+  <div class="container">
+<h2> JAVA SCRIPT :- </h2>
+ <hr style="width: 20%;margin-left: 0px;margin-top: -30px;"/>
+ <nav id="link">
   <a href="js/first.html">FIRST </a>
-
-
 <a href="js/div.html">DIVISION IN JS</a>
-
-
 <a href="js/div2.html">DIVISION IN JS 2</a>
-
-
 <a href="js/text.html">TEXT ANIMATION</a>
-
-
 <a href="js/event.html">EVENT ONCHANGE</a>
-
-
 <a href="js/interval.html">SET TIMEOUT</a>
-<br/>
-<br/>
-<br/>
-
 <a href="js/date and set interval.html">DATE CLASS AND SET INTERVAL</a>
-
-
 <a href="js/colorpallet.html">COLOR PALLETE</a>
-
-
 <a href="js/randomcolor.html">RANDOM COLOR</a>
-
-
 <a href="js/scrolling images.html">SCROLLING IMAAGES</a>
-<br/>
-<br/>
-<br/>
-
 <a href="js/loop2.html">CREATING TABLE</a>
-
-
 <a href="js/loop web photogallery.html">WEB PHOTOGALLERY</a>
-
-
 <a href="js/whileloop.html">TABLE WITH WHILELOOP</a>
-
-
 <a href="js/array2.html">NEWS WITH ARRAY</a>
-<br/>
-<br/>
-<br/>
-
 <a href="js/image.html">IMAGE OF THE DAY</a>
-
 <a href="js/banner.html">BANNER </a>
-
-
 <a href="js/banner2.html">BANNER 2 </a>
-
-
 <a href="js/banner3.html">BANNER 3 </a>
-
-
 <a href="js/scrollevent.html">SCROLL EVENT </a>
-
-
 <a href="js/scrollevent 2.html">SCROLL EVENT 2 </a>
-<br/>
-<br/>
-<br/>
-
 <a href="js/keyboard1.html">KEYBOARD FUNCTION 1</a>
-
 <a href="js/keyboard2.html">KEYBOARD FUNCTION 2 </a>
-
-
 <a href="js/cursor_position2.html">CURSOR POSITION</a>
-
-
 <a href="js/dynamicimages.html">DYNAMIC IMAGES</a>
-<br/>
-<br/>
-<br/>
-
 <a href="js/drawing.html">DRAWING IN CANVAS</a>
-
-
 <a href="js/drawing_line.html">DRAWING IN CANVAS 2</a>
-
-
 <a href="js/drawing 2.html">DRAWING IN CANVAS 3</a>
-<br/>
-<br/>
-
-</nav>
+ </nav>
 </div>
  <hr style="width: 50%;"/>
-<h2 style="color:#a569bd;margin-top:30px;font-family: 'Montserrat', sans-serif;margin-left: 30px;font-size: 50px;font-weight:600;">
-JQUERY :-
-</h2>
- <hr style="width: 13%;margin-left: 25px;margin-top: -30px;"/>
- <div id="jq">
-<nav>
 
+   <div class="container">
+<h2> JQUERY :- </h2>
+ <hr style="width: 15%;margin-left: 0px;margin-top: -30px;"/>
+ <nav id="link">
   <a href="js/jq.html">WORKING WITH JQUERY</a>
-
-
 <a href="js/jq2.html">JQUERY SELECTOR</a>
-
-
 <a href="js/jq3.html">JQUERY EFFECTS</a>
-
-
 <a href="js/jq4.html">JQUERY ANIMATION</a>
-<br/>
-<br/>
-<br/>
 <a href="js/jq5.html">JQUERY ADD & REMOVE CLASS</a>
-
 <a href="js/jq pluggings.html">JQUERY SCROLL EFFECT</a>
-
 <a href="js/jq plug2.html">JQUERY TILE EFFECT</a>
-
 <a href="js/jq menu.html">JQUERY MENU</a>
-<br/>
-<br/>
-<br/>
-
-</nav>
+ </nav>
 </div>
- <hr style="width: 50%;margin-top: -100px;"/>
+ <hr style="width: 50%;"/>
 
-<div id="footer">
+ <div class="container">
+<h2>BOOTSTRAP :-</h2>
+ <hr style="width: 20%;margin-left: 0px;margin-top: -30px;"/>
+ <nav id="link">
+
+ </nav>
+</div>
+ <hr style="width: 50%;margin-top:110px ;"/>
+ <div id="footer">
   <div class="footer-content">
     <p>© 2025 Devika Saini</p>
     <p>Designed & Developed by Devika Saini</p>
