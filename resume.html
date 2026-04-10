@@ -97,6 +97,15 @@
       color: #a569bd;
     }
 
+    a{
+  text-decoration:none;
+  color: white;
+}
+
+a:hover{
+  color: #a569bd;
+}
+
         h1.section-title {
       margin: auto;
       margin-top: 30px;
@@ -105,7 +114,88 @@
       background: #a569bd;
       border-radius: 10px;
     }
-    /* Responsive Adjustments */
+
+.resume-container {
+  display: flex;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #111;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow:0px 0px 10px #aaa;
+}
+
+.left {
+  width: 30%;
+  background: #1a1a1a;
+  padding: 20px;
+}
+
+.right {
+  width: 70%;
+  padding: 25px;
+}
+
+.profile-box {
+  margin-bottom: 30px;
+}
+
+.role {
+  color: #a569bd;
+  font-size: 14px;
+}
+
+.resume-section {
+  margin-bottom: 25px;
+}
+
+.resume-section h3 {
+  margin-bottom: 10px;
+  border-left: 4px solid #a569bd;
+  padding-left: 10px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills-list span {
+  background: #2a2a2a;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.card {
+  background: #1f1f1f;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: #2a2a2a;
+}
+
+.card span {
+  font-size: 12px;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .resume-container {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+}
+
     @media screen and (max-width: 768px) {
       #navbar {
         justify-content: center;
@@ -129,6 +219,7 @@
         width: 100%;
         text-align: center;
       }
+
     }
 </style>
 <body>
@@ -138,7 +229,6 @@
       <ol>
       <li><a href="index.html">Home</a></li>
        <li><a href="resume.html">Resume</a></li>
-      <li><a href="practice.html">Practice</a></li>
       <li><a href="myproject.html">Projects</a></li>
       </ol>
     </nav>
@@ -146,6 +236,85 @@
   <hr style="width: 100%;margin-bottom:20px;"/>
   
   <h1 class="section-title">RESUME</h1>
+
+<div class="resume-container">
+
+  <!-- LEFT COLUMN -->
+  <div class="left">
+
+    <div class="profile-box">
+      <h2>Devika Saini</h2>
+      <p class="role">Aspiring UI/UX Designer & Frontend Developer</p>
+    </div>
+
+    <div class="resume-section">
+      <h3>Contact</h3>
+      <p>📍 Delhi, India</p>
+      <p>✉️ devikasaini0111@gmail.com</p>
+    </div>
+
+    <div class="resume-section">
+      <h3>Skills</h3>
+      <div class="skills-list">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Bootstrap</span>
+        <span>Figma</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT COLUMN -->
+  <div class="right">
+
+    <div class="resume-section">
+      <h3>About Me</h3>
+      <p>
+
+Motivated UI/UX designer and frontend developer with strong foundation in 
+HTML, CSS, Bootstrap and Figma. Passionate about creating clean, responsive 
+and user-friendly interfaces. Currently building real-world projects to 
+enhance skills and gain practical experience.
+
+      </p>
+    </div>
+<div class="resume-section">
+  <h3>Education</h3>
+
+  <div class="card">
+    <h4>Graphic & Website Designing</h4>
+    <span>2024 - 2026</span>
+    <p>Arena Animation</p>
+  </div>
+
+</div>
+
+    <div class="resume-section">
+      <h3>Projects</h3>
+
+      <div class="card">
+        <h4>Home Controlling App UI</h4>
+        <p>A minimal and intuitive home control app UI that enables seamless management of smart devices with real-time controls, automation modes, and a clean card-based dashboard.</p>
+        </div>
+
+      <div class="card">
+        <h4>Book Selling App UI</h4>
+        <p>A clean and user-friendly book selling app UI that offers easy browsing, smart search, and seamless checkout for a smooth reading purchase experience.</p>
+      </div>
+
+    </div>
+
+    <div class="resume-section">
+  <h3>Profiles</h3>
+  <p><a href="https://devika236.github.io/satya/">GitHub</a></p>
+  <p><a href="https://www.behance.net/devikasaini5">Behance</a></p>
+</div>
+
+  </div>
+  
+
+</div>
 
 
 
@@ -160,7 +329,7 @@
     </p>
     <div class="social-links">
       <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> | 
-      <a href="https://github.com/yourprofile" target="_blank">Behance</a> | 
+      <a href="https://www.behance.net/devikasaini5" target="_blank">Behance</a> | 
       <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
     </div>
   </div>
