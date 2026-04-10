@@ -1,151 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Smurfs</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 <style>
-body
-{
-background:#92d9ff;
-  margin:0px;
-  padding:0px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a:link{color:white;text-decoration: none;}
-a:visited{color:white;}
-a:hover{color:#1248ad;}
-
-#nav
-{
-margin-left:73%;
-margin-top:50px;
-cursor:pointer;
-margin-bottom: 100px;
-
+body { 
+  background: linear-gradient(120deg, #A7D8FF, #5DBBFF);
+  font-family:cursive;
+  line-height: 1.5;
 }
 
-#nav ol
-{
-margin:auto;
-width:60%;
+a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
 }
 
-#nav ol li
-{
-list-style:none;
-display:inline-block;
-padding:15px;
-margin-left:10px;
-border:3px white solid;
-border-radius: 15px;
+a:hover {
+  color: #1248ad;
 }
 
-#nav ol li:hover
-{
-border-radius:15px;
-background:white;
+#nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 40px;
 }
 
-#nav ol li:hover a:visited
-{
-color:#1248ad;
+#nav ol {
+  display: flex;
+  gap: 15px;
 }
 
-#pic
-{
- width:60%;
- height:600px; 
- margin-left:400px; 
- border-radius: 30px;
- box-shadow: 3px 3px 10px black; 
- margin-top: -10px;
+#nav ol li {
+  list-style: none;
+  padding: 10px 18px;
+  border: 2px solid white;
+  border-radius: 12px;
+  transition: 0.3s;
 }
 
-#pic:hover
-{
-animation:pulse;
-animation-duration:1s;
+#nav ol li:hover {
+  background: white;
 }
 
-#smurf
-{
- width:95%;
- text-align: center;
- margin: 15px;
-padding: 30px;
+#nav ol li:hover a {
+  color: #1248ad;
 }
 
-#about
-{
- font-family: cursive;
- font-size: 20px;
- margin: 40px;
- text-align: justify;
- color:#002fffd8;   
+h1 {
+  color: #003366;
+  font-size: 45px;
+  font-family:Georgia;
+  margin: 40px auto 20px;
+  width: 90%;
+  max-width: 1100px;
+}
+
+.pic {
+  display: block;
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+  transition: 0.3s;
+}
+
+.pic:hover {
+  transform: scale(1.05);
+}
+
+#smurf {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+#about {
+  font-size: 22px;
+  color: #002fff;
+  text-align: justify;
+  margin-top: 10px;
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+footer a {
+  color: #00ccff;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* ✅ FIXED MOBILE NAVBAR */
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  #nav {
+    justify-content: center;
+  }
+
+  #nav ol {
+    flex-direction: row;      /* KEEP IN ONE LINE */
+    justify-content: center;
+    flex-wrap: wrap;          /* prevents overflow */
+  }
+
+  #nav ol li {
+    padding: 8px 12px;
+  }
+
+  #about {
+    font-size: 16px;
+  }
 }
 
 </style>
+</head>
+
 <body>
 
-     <div id="nav">
-<ol>
-<li><a href="home.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="characters.html">Characters</a></li>
-</ol>
+<div id="nav">
+  <ol>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="characters.html">Characters</a></li>
+  </ol>
 </div>
 
-<h1 style="color:#003366;font-size:60px;font-family:Gordito;text-align:left;margin-top:-20px;margin-left:40px;">ABOUT SMURFS</h1>
+<h1>ABOUT SMURFS</h1>
 
-<img id="pic" src ="images/s20.jpg">
- 
-<div id="smurf">
- <p id="about">
-The Smurfs are a popular fictional race of small, blue creatures that originated in Belgian comic books. Created by cartoonist<u style="color: #003366;"> Peyo (Pierre Culliford) </u>, the Smurfs first appeared in<u style="color: #003366;">1958 </u> as supporting characters in a series of stories in the comic strip Johan and Peewit. Due to their massive popularity, the Smurfs quickly became a standalone comic series and have since evolved into a global franchise.The term "Smurf" came from a humorous miscommunication between Peyo and a friend over dinner. Peyo had asked his friend to pass the salt, but instead, he said "Smurf," leading to the creation of the now iconic name.<br/>
-<br/>
-Smurfs are typically depicted as small, humanoid creatures with blue skin, white pants, and white hats. They are around 3 apples tall, and their size is a crucial element to their charm and the humor of the stories.They have human-like features (arms, legs, and faces) but are easily distinguishable by their blue skin and unique size. They also have exaggerated facial expressions, which convey emotions vividly.
-<br/>
-<br/>
-The Smurfs have become a part of popular culture, and the iconic blue creatures are still easily recognizable by people of all ages, thanks to their universal themes of friendship, cooperation, and good triumphing over evil.The Smurfs represent the power of community and positivity, making them timeless figures in the world of children's entertainment. Whether you're a fan of the comics, TV series, or movies, there's no denying the Smurfs' impact on generations of viewers.
- </p>
- </div>
-
-<h1 style="color:#003366;font-size:60px;font-family:Gordito;text-align:left;margin-top:-20px;margin-left:40px;">SMURFS CONTEST</h1>
-
-<img id="pic" src ="images/s18.jpg">
+<img class="pic" src="images/s20.jpg">
 
 <div id="smurf">
- <p id="about">
-In the Smurfs universe, contests often serve as a backdrop for humor, competition, and character development. One notable example is the "Mr. Smurf Contest" from the animated series. In this episode, the Smurfs hold a contest to determine who will accompany Smurfette to the Harvest Moon Ball. The event features various categories, including personal entrances, group dances, talent displays, and a Q&A session. The twist occurs when Gargamel disguises himself as a Smurf named "Nosey" to infiltrate the contest. However, his plan is foiled when Smurfette, unable to choose a single winner due to the contestants' unique qualities, declares all of them winners. Gargamel's disguise is eventually exposed, and he is cast out of the village. 
-<BR/>
-<BR/>
-Smurfs contest the key is to keep it fun, lighthearted, and true to the spirit of the Smurfs—emphasizing creativity, teamwork, and a little bit of quirky humor! 
- </p>
- </div>
+  <p id="about">
+    The Smurfs are a popular fictional race of small, blue creatures that originated in Belgian comic books. Created by cartoonist <u style="color:#003366;">Peyo (Pierre Culliford)</u>, the Smurfs first appeared in <u style="color:#003366;">1958</u> as supporting characters in a series of stories in the comic strip Johan and Peewit. Due to their massive popularity, the Smurfs quickly became a standalone comic series and have since evolved into a global franchise.
 
- <footer style="background-color: #003366; color: white; text-align: center; padding:10px; font-family: sans-serif;">
+    <br><br>
+
+    The term "Smurf" came from a humorous miscommunication between Peyo and a friend over dinner. Peyo had asked his friend to pass the salt, but instead, he said "Smurf," leading to the creation of the now iconic name.
+
+    <br><br>
+
+    Smurfs are typically depicted as small, humanoid creatures with blue skin, white pants, and white hats. They are around 3 apples tall, and their size is a crucial element to their charm and the humor of the stories.
+
+    <br><br>
+
+    The Smurfs have become a part of popular culture, representing friendship, cooperation, and positivity across generations.
+  </p>
+</div>
+
+<h1>SMURFS CONTEST</h1>
+
+<img class="pic" src="images/s18.jpg">
+
+<div id="smurf">
+  <p id="about">
+    In the Smurfs universe, contests often serve as a backdrop for humor, competition, and character development. One notable example is the "Mr. Smurf Contest".
+
+    <br><br>
+
+    In this event, Smurfs compete in categories like talent shows, dance, and creativity. Gargamel disguises himself to infiltrate the contest, but his plan fails.
+
+    <br><br>
+
+    Smurfette ultimately declares everyone a winner, emphasizing teamwork and equality.
+
+    <br><br>
+
+    The spirit of Smurfs contests is all about fun, creativity, and community.
+  </p>
+</div>
+
+<footer>
   <h3>The Smurfs™</h3>
   <p>Explore the Smurf village, play games, watch videos, and have fun!</p>
 
-  <div style="margin: 10px 0;">
-    <a href="characters.html" style="color: #00ccff; margin: 0 10px;">Characters</a>
-    <a href="https://play.google.com/store/apps/details?id=com.capcom.smurfsandroid&hl=en_IN" style="color: #00ccff; margin: 0 10px;">Games</a>
-    <a href="https://www.youtube.com/channel/UCeY4C8Sbx8B4bIyREPSvORQ?sub_confirmation=1" style="color: #00ccff; margin: 0 10px;">Videos</a>
-    <a href="https://bluedwarfs.com/en/" style="color: #00ccff; margin: 0 10px;">Shop</a>
+  <div>
+    <a href="characters.html">Characters</a>
+    <a href="https://play.google.com/store/apps/details?id=com.capcom.smurfsandroid&hl=en_IN">Games</a>
+    <a href="https://www.youtube.com/channel/UCeY4C8Sbx8B4bIyREPSvORQ?sub_confirmation=1">Videos</a>
+    <a href="https://bluedwarfs.com/en/">Shop</a>
   </div>
 
-  <div style="margin: 10px 0;">
-    <a href="https://www.facebook.com/SmurfOfficial/" style="color: #cccccc; margin: 0 5px;">Facebook</a> |
-    <a href="https://www.instagram.com/smurfsofficial/?hl=en" style="color: #cccccc; margin: 0 5px;">Instagram</a> |
-    <a href="https://x.com/SmurfsMovie?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" style="color: #cccccc; margin: 0 5px;">X/Twitter</a>
+  <div style="margin-top:10px;">
+    <a href="https://www.facebook.com/SmurfOfficial/">Facebook</a> |
+    <a href="https://www.instagram.com/smurfsofficial/?hl=en">Instagram</a> |
+    <a href="https://x.com/SmurfsMovie">X/Twitter</a>
   </div>
 
-  <p style="font-size: 12px; color: #aaa;">&copy; 2025 Peyo - All rights reserved.</p>
+  <p style="font-size:12px; color:#aaa; margin-top:10px;">
+    &copy; 2025 Peyo - All rights reserved.
+  </p>
 </footer>
+
 </body>
 </html>

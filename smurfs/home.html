@@ -1,109 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smurfs World</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 <style>
-body
-{
-background:#92d9ff;
-  margin:0px;
-  padding:0px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a:link{color:white;text-decoration: none;}
-a:visited{color:white;}
-a:hover{color:#1248ad;}
-
-#nav
-{
-margin-left:73%;
-margin-top:50px;
-cursor:pointer;
-margin-bottom: 100px;
-
+body { 
+  background: linear-gradient(120deg, #A7D8FF, #5DBBFF);
+  font-family: cursive;
+  line-height: 1.5;
 }
 
-#nav ol
-{
-margin:auto;
-width:60%;
+/* NAVBAR */
+nav{
+  display:flex;
+  justify-content:flex-end;
+  padding:20px 40px;
 }
 
-#nav ol li
-{
-list-style:none;
-display:inline-block;
-padding:15px;
-margin-left:10px;
-border:3px white solid;
-border-radius: 15px;
+nav ul{
+  display:flex;
+  gap:15px;
 }
 
-#nav ol li:hover
-{
-border-radius:15px;
-background:white;
+nav ul li{
+  list-style:none;
 }
 
-#nav ol li:hover a:visited
-{
-color:#1248ad;
+nav ul li a{
+  color:white;
+  text-decoration:none;
+  padding:10px 15px;
+  border:2px solid white;
+  border-radius:10px;
+  transition:0.3s;
 }
 
-#img
-{
-  backgrund: #003366;
-margin-top: 500px;
-margin-left: 300px;
-animation:zoomIn;
-animation-duration:1s;
+nav ul li a:hover{
+  background:white;
+  color:#1248ad;
+  transform:scale(1.05);
 }
 
+/* HERO BANNER (UPDATED) */
+.hero{
+  height: 85vh;
+  width: calc(100% - 40px);
+  margin: 20px;
+  background: url("images/The Smurfs.jpg") center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
 
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
 
-body{
-  background: url(images/h2.jpg);
+/* OVERLAY */
+.overlay{
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  text-align:center;
+  border-radius: 20px;
+}
+
+/* TEXT */
+.hero h1{
+  color: white;
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+.hero p{
+  color: #ddd;
+  font-size: 20px;
+}
+
+/* FOOTER */
+footer{
+  background:#003366;
+  color:white;
+  text-align:center;
+  padding:25px;
+}
+
+footer a{
+  color:#00ccff;
+  margin:0 10px;
+  text-decoration:none;
+}
+
+footer a:hover{
+  text-decoration:underline;
+}
+
+footer .social a{
+  color:#ccc;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  nav{
+    justify-content:center;
+  }
+
+  .hero{
+    height: 60vh;
+    width: calc(100% - 20px);
+    margin: 10px;
+    border-radius: 20px;
+  }
+
+  .hero h1{
+    font-size:28px;
+  }
+
+  .hero p{
+    font-size:14px;
+  }
+
+  .overlay{
+    padding:20px;
+  }
 }
 </style>
+</head>
+
 <body>
 
-     <div id="nav">
-<ol>
-<li><a href="home.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="characters.html">Characters</a></li>
-</ol>
-</div>
+<nav>
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="characters.html">Characters</a></li>
+  </ul>
+</nav>
 
-<div id="img">
-<img src="images/h1.png">
-</div>
+<section class="hero">
+  <div class="overlay">
+    <h1 class="animate__animated animate__fadeInDown">
+      Welcome to Smurf Village
+    </h1>
+    <p class="animate__animated animate__fadeInUp">
+      Explore the magical world of the Smurfs
+    </p>
+  </div>
+</section>
 
-
- <footer style="background-color: #003366; color: white; text-align: center; padding:10px; font-family: sans-serif;">
+<footer>
   <h3>The Smurfs™</h3>
   <p>Explore the Smurf village, play games, watch videos, and have fun!</p>
 
-  <div style="margin: 10px 0;">
-    <a href="characters.html" style="color: #00ccff; margin: 0 10px;">Characters</a>
-    <a href="https://play.google.com/store/apps/details?id=com.capcom.smurfsandroid&hl=en_IN" style="color: #00ccff; margin: 0 10px;">Games</a>
-    <a href="https://www.youtube.com/channel/UCeY4C8Sbx8B4bIyREPSvORQ?sub_confirmation=1" style="color: #00ccff; margin: 0 10px;">Videos</a>
-    <a href="https://bluedwarfs.com/en/" style="color: #00ccff; margin: 0 10px;">Shop</a>
+  <div>
+    <a href="characters.html">Characters</a>
+    <a href="https://play.google.com/store/apps/details?id=com.capcom.smurfsandroid&hl=en_IN">Games</a>
+    <a href="https://www.youtube.com/channel/UCeY4C8Sbx8B4bIyREPSvORQ?sub_confirmation=1">Videos</a>
+    <a href="https://bluedwarfs.com/en/">Shop</a>
   </div>
 
-  <div style="margin: 10px 0;">
-    <a href="https://www.facebook.com/SmurfOfficial/" style="color: #cccccc; margin: 0 5px;">Facebook</a> |
-    <a href="https://www.instagram.com/smurfsofficial/?hl=en" style="color: #cccccc; margin: 0 5px;">Instagram</a> |
-    <a href="https://x.com/SmurfsMovie?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" style="color: #cccccc; margin: 0 5px;">X/Twitter</a>
+  <div class="social" style="margin-top:10px;">
+    <a href="https://www.facebook.com/SmurfOfficial/">Facebook</a> |
+    <a href="https://www.instagram.com/smurfsofficial/?hl=en">Instagram</a> |
+    <a href="https://x.com/SmurfsMovie">Twitter</a>
   </div>
 
-  <p style="font-size: 12px; color: #aaa;">&copy; 2025 Peyo - All rights reserved.</p>
+  <p style="font-size:12px; color:#aaa; margin-top:10px;">
+    &copy; 2025 Peyo - All rights reserved.
+  </p>
 </footer>
+
 </body>
 </html>

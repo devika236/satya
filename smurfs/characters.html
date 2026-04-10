@@ -1,233 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Characters</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 <style>
-#ch
-{
-width:100%;
-height:500px; 
-opacity:80%;
-display:flex; 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#fam
-{
-width:300px;
-height:350px;
-margin:80px; 
+body { 
+  background: linear-gradient(120deg, #A7D8FF, #5DBBFF);
+  font-family: cursive;
 }
 
-#fam :hover
-{
-animation:pulse;
-animation-duration:1s;
-}
-body
-{
-background:#92d9ff;
-  margin:0px;
-  padding:0px;
+#nav {
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px;
 }
 
-
-a:link{color:white;text-decoration: none;}
-a:visited{color:white;}
-a:hover{color:#1248ad;}
-
-#nav
-{
-margin-left:73%;
-margin-top:50px;
-cursor:pointer;
-margin-bottom: 100px;
-
+#nav ol {
+  display: flex;
+  gap: 15px;
 }
 
-#nav ol
-{
-margin:auto;
-width:60%;
+#nav li {
+  list-style: none;
+  padding: 10px 20px;
+  border: 2px white solid;
+  border-radius: 12px;
+  transition: 0.3s;
 }
 
-#nav ol li
-{
-list-style:none;
-display:inline-block;
-padding:15px;
-margin-left:10px;
-border:3px white solid;
-border-radius: 15px;
+#nav li:hover {
+  background: white;
 }
 
-#nav ol li:hover
-{
-border-radius:15px;
-background:white;
+#nav a {
+  color: white;
+  text-decoration: none;
 }
 
-#nav ol li:hover a:visited
-{
-color:#1248ad;
+#nav li:hover a {
+  color: #1248ad;
+}
+
+h1 {
+  color: #003366;
+  font-size: 60px;
+  font-family:Georgia;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.ch {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+}
+
+.fam {
+  width: 220px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.fam:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 102, 255, 0.4);
+}
+
+.fam a {
+  text-decoration: none;
+  color: white;
+}
+
+.fam a:hover {
+  color: #e0f7ff;
+}
+
+.fam img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.fam h2 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-family: sans-serif;
+  margin-top: 30px;
+}
+
+footer a {
+  color: #00ccff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ✅ FIXED MOBILE NAVBAR */
+@media (max-width: 768px) {
+
+  h1 { 
+    font-size: 40px; 
+  }
+
+  #nav {
+    justify-content: center;
+  }
+
+  #nav ol {
+    flex-direction: row;      /* keep horizontal */
+    justify-content: center;
+    flex-wrap: wrap;          /* prevent overflow */
+  }
+
+  #nav li {
+    padding: 8px 12px;
+  }
+
+  .fam {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .fam { width: 90%; }
 }
 </style>
+</head>
+
 <body>
 
-            <div id="nav">
-<ol>
-<li><a href="home.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="characters.html">Characters</a></li>
-</ol>
+<div id="nav">
+  <ol>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="characters.html">Characters</a></li>
+  </ol>
 </div>
-      
-      <h1 style="color:#003366;font-size:80px;font-family:Gordito;text-align:center;margin-top:-70px;">CHARACTERS</h1>
 
-   
-   <div id="ch">
-     <div id="fam">
-      <a href="azrael.html">
-<img src="images/s2.png">
-<h2 style="font-family:cursive;text-align:center;font-size:35px;margin-top:auto;color:white">AZRAEL</h2>
-</a>
- </div>
+<h1>CHARACTERS</h1>
 
- <div id="fam">
-    <a href="willow.html">
-<img src="images/s3.png">
-<h2 style="font-family:cursive;text-align:center;font-size:35px;margin-top:auto;color:white">WILLOW</h2>
-</a>
- </div>
+<div class="ch">
 
- <div id="fam">
-    <a href="handy.html">
-<img src="images/s4.png">
-<h2 style="font-family:cursive;text-align:center;font-size:35px;margin-top:auto;color:white">HANDY</h2>
-</a>
- </div>
+<div class="fam"><a href="azrael.html"><img src="images/s2.png"><h2>AZRAEL</h2></a></div>
+<div class="fam"><a href="willow.html"><img src="images/s3.png"><h2>WILLOW</h2></a></div>
+<div class="fam"><a href="handy.html"><img src="images/s4.png"><h2>HANDY</h2></a></div>
+<div class="fam"><a href="farmer.html"><img src="images/s5.png"><h2>FARMER</h2></a></div>
+<div class="fam"><a href="jokey.html"><img src="images/s10.png"><h2>JOCKEY</h2></a></div>
+<div class="fam"><a href="lily.html"><img src="images/s7.png"><h2>LILY</h2></a></div>
+<div class="fam"><a href="blossom.html"><img src="images/s8.png"><h2>BLOSSOM</h2></a></div>
+<div class="fam"><a href="papasmurf.html"><img src="images/s9.png"><h2>PAPA SMURF</h2></a></div>
+<div class="fam"><a href="smurfette.html"><img src="images/s11.png"><h2>SMURFETTE</h2></a></div>
+<div class="fam"><a href="grouchy.html"><img src="images/s12.png"><h2>GROUCHY</h2></a></div>
+<div class="fam"><a href="brainy.html"><img src="images/s13.png"><h2>BRAINY</h2></a></div>
+<div class="fam"><a href="storm.html"><img src="images/s14.png"><h2>STORM</h2></a></div>
+<div class="fam"><a href="gargamel.html"><img src="images/s15.png"><h2>GARGAMEL</h2></a></div>
+<div class="fam"><a href="hefty.html"><img src="images/s16.png"><h2>HEFTY</h2></a></div>
+<div class="fam"><a href="fireman.html"><img src="images/s6.png"><h2>FIREMAN</h2></a></div>
+<div class="fam"><a href="amm.html"><img src="images/s17.png"><h2>AND MANY MORE...</h2></a></div>
 
- <div id="fam">
-   <a href="farmer.html">
-<img src="images/s5.png">
-<h2 style="font-family:cursive;text-align:center;font-size:35px;margin-top:auto;color:white">FARMER</h2>
-</a>
- </div>
- </div>
-    
+</div>
 
- <div id="ch">
- <div id="fam">
-<a href="jokey.html">
-<img src="images/s10.png">
-<h2 style="font-family:cursive;text-align:center;font-size:35px;margin-top:auto;color:white">JOCKEY</h2>
-</a>
- </div>
-
- <div id="fam">
-<a href="lily.html">
-<img src="images/s7.png">
-<h2 style="font-family:cursive;text-align:center;font-size:35px;margin-top:auto;color:white">LILY</h2>
-</a>
- </div>
-
- <div id="fam">
- <a href="blossom.html">
-<img src="images/s8.png">
-<h2 style="font-family:cursive;text-align:center;font-size:35px;margin-top:auto;color:white">BLOSSOM</h2>
-</a>
- </div>
-
- <div id="fam">
-  <a href="papasmurf.html">
-<img src="images/s9.png">
-<h2 style="font-family:cursive;text-align:center;font-size:35px;margin-top:auto;color:white">PAPA SMURF</h2>
-</a>
- </div>
- </div>
-
- <div id="ch">
- <div id="fam">
-   <a href="smurfette.html">
-<img src="images/s11.png">
-<h2 style="font-family:cursive;text-align:center;font-size:35px;margin-top:auto;color:white">SMURFETTE</h2>
-</a>
- </div>
-
- <div id="fam">
-  <a href="grouchy.html">
-<img src="images/s12.png">
-<h2 style="font-family:cursive;text-align:center;font-size:35px;margin-top:auto;color:white">GROUCHY</h2>
-</a>
- </div>
-
- <div id="fam">
-  <a href="brainy.html">
-<img src="images/s13.png">
-<h2 style="font-family:cursive;text-align:center;font-size:35px;margin-top:auto;color:white">BRAINY</h2>
-</a>
- </div>
-
- <div id="fam">
-   <a href="storm.html">
-<img src="images/s14.png">
-<h2 style="font-family:cursive;text-align:center;font-size:35px;margin-top:auto;color:white">STORM</h2>
-</a>
- </div>
- </div>
-
- <div id="ch">
-<div id="fam">
-  <a href="gargamel.html">
-<img src="images/s15.png">
-<h2 style="font-family:cursive;text-align:center;font-size:35px;margin-top:auto;color:white">GARGAMEL</h2>
-</a>
- </div>
-
- <div id="fam">
-   <a href="hefty.html">
-<img src="images/s16.png">
-<h2 style="font-family:cursive;text-align:center;font-size:35px;margin-top:auto;color:white">HEFTY</h2>
-</a>
- </div>
-
- <div id="fam">
-  <a href="fireman.html">
-<img src="images/s6.png">
-<h2 style="font-family:cursive;text-align:center;font-size:35px;margin-top:auto;color:white">FIREMAN</h2>
-</a>
- </div>
-
- <div id="fam">
-  <a href="amm.html">
-<img src="images/s17.png">
-<h2 style="font-family:cursive;text-align:center;font-size:35px;margin-top:auto;color:white">AND MANY MORE...</h2>
-</a>
- </div>
- </div>
-
- <footer style="background-color: #003366; color: white; text-align: center; padding:10px; font-family: sans-serif;">
+<footer>
   <h3>The Smurfs™</h3>
   <p>Explore the Smurf village, play games, watch videos, and have fun!</p>
 
-  <div style="margin: 10px 0;">
-    <a href="characters.html" style="color: #00ccff; margin: 0 10px;">Characters</a>
-    <a href="https://play.google.com/store/apps/details?id=com.capcom.smurfsandroid&hl=en_IN" style="color: #00ccff; margin: 0 10px;">Games</a>
-    <a href="https://www.youtube.com/channel/UCeY4C8Sbx8B4bIyREPSvORQ?sub_confirmation=1" style="color: #00ccff; margin: 0 10px;">Videos</a>
-    <a href="https://bluedwarfs.com/en/" style="color: #00ccff; margin: 0 10px;">Shop</a>
+  <div>
+    <a href="characters.html">Characters</a>
+    <a href="https://play.google.com/store/apps/details?id=com.capcom.smurfsandroid&hl=en_IN">Games</a>
+    <a href="https://www.youtube.com/channel/UCeY4C8Sbx8B4bIyREPSvORQ?sub_confirmation=1">Videos</a>
+    <a href="https://bluedwarfs.com/en/">Shop</a>
   </div>
 
-  <div style="margin: 10px 0;">
-    <a href="https://www.facebook.com/SmurfOfficial/" style="color: #cccccc; margin: 0 5px;">Facebook</a> |
-    <a href="https://www.instagram.com/smurfsofficial/?hl=en" style="color: #cccccc; margin: 0 5px;">Instagram</a> |
-    <a href="https://x.com/SmurfsMovie?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" style="color: #cccccc; margin: 0 5px;">X/Twitter</a>
+  <div style="margin-top:10px;">
+    <a href="https://www.facebook.com/SmurfOfficial/">Facebook</a> |
+    <a href="https://www.instagram.com/smurfsofficial/?hl=en">Instagram</a> |
+    <a href="https://x.com/SmurfsMovie">X/Twitter</a>
   </div>
 
-  <p style="font-size: 12px; color: #aaa;">&copy; 2025 Peyo - All rights reserved.</p>
+  <p style="font-size:12px;color:#aaa;margin-top:10px;">
+    &copy; 2025 Peyo - All rights reserved.
+  </p>
 </footer>
+
 </body>
 </html>
