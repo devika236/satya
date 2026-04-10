@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
+   <style>
+          .rotate-icon {
+        animation: spin 3s linear infinite;
+        filter: drop-shadow(0 3px 0 #628ecb);
+        color:white;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(30deg); }
+      }
+
+      .navbar {
+        background-color: black;
+      }
+
+      .brand-text {
+        font-weight: 700;
+        color: white;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        filter: drop-shadow(1px 3px 1px #628ecb);
+      }
+
+      .nav-link {
+        color: white;
+        background:#628ecb;
+        border-radius: 10px;
+        margin-left: 8px;
+      }
+
+      .nav-link:hover {
+        color: #628ecb;
+        background: white;
+      }
+
+          .nav-link.active
+      {
+        color: #628ecb !important;
+        background: white;
+          font-weight:600;
+      }
+
+      .usecase-card {
+  background: #0d1117;
+  border: 1px solid #628ecb;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.usecase-card img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.usecase-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #628ecb;
+}
+
+.usecase-card img {
+  height: 230px;
+  object-fit: cover;
+}
+
+.footer-custom {
+  background: #000;}
+
+.footer-link {
+  color:#628ecb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-link:hover {
+  color: white;
+}
+
+.social-icon {
+  color: #628ecb;
+  font-size: 1.4rem;
+  margin-right: 12px;
+  transition: 0.3s;
+}
+
+.social-icon:hover {
+  color: white;
+  text-shadow: 0 0 10px #628ecb;
+}
+
+.info-card {
+  background: #0d1117;
+  border: 1px solid #628ecb;
+  border-radius: 14px;
+  padding: 28px;
+  transition: 0.35s;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px #628ecb;
+}
+
+.info-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+  color: #c7d1e0;
+}
+
+.icon-badge {
+  min-width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.icon-badge.success {
+  background: rgba(98, 142, 203, 0.15);
+  color: #628ecb;
+}
+
+.icon-badge.danger {
+  background: rgba(255, 99, 99, 0.15);
+  color: #ff6b6b;
+}
+
+.comparison-card {
+  background: #0d1117;
+  border: 1px solid #628ecb;
+  border-radius: 14px;
+  transition: 0.3s ease;
+  padding: 10px;              
+}
+
+.comparison-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px #628ecb;
+}
+
+.comparison-list li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #d9d9d9;
+}
+
+.comparison-list i {
+  color: #628ecb;
+  margin-right: 8px;
+}
+
+.comparison-list li {
+  line-height: 1.6;
+}
+
+
+
+
+  </style>
+ <body class="bg-black text-light">
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <i class="fa-solid fa-satellite fs-3 me-2 rotate-icon"></i>
+          <span class="brand-text">Satellite Internet in INDIA</span>
+        </div>
+
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="satellite map.html">Satellite Map</a></li>
+            <li class="nav-item"><a class="nav-link active" href="cases.html">Use Cases & Impact</a></li>
+            <li class="nav-item"><a class="nav-link" href="future.html">Future</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <hr class="border border-light border-1 mt-0 opacity-100"/>
+
+<div class="container mt-5">
+  <h1 class="mb-4 text-center">Use Cases of Satellite Internet in India</h1>
+
+  <div class="row g-4">
+
+    <div class="col-12 col-md-4">
+      <div class="card usecase-card h-100">
+        <img src="images/r1.png" class="card-img-top" alt="Remote connectivity">
+        <div class="card-body">
+          <h5 class="card-title text-info">
+            <i class="fa-solid fa-mountain me-2"></i>Remote & Rural Areas
+          </h5>
+          <p class="card-text text-light">
+            Provides internet access to villages, hills, forests, and islands
+            where fiber and mobile networks are unavailable.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="card usecase-card h-100">
+        <img src="images/e1.png" class="card-img-top" alt="Education">
+        <div class="card-body">
+          <h5 class="card-title text-info">
+            <i class="fa-solid fa-graduation-cap me-2"></i>Education
+          </h5>
+          <p class="card-text text-light">
+            Enables online classes, digital learning, and smart classrooms
+            for students in remote schools.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="card usecase-card h-100">
+        <img src="images/h1.png" class="card-img-top" alt="Healthcare">
+        <div class="card-body">
+          <h5 class="card-title text-info">
+            <i class="fa-solid fa-hospital me-2"></i>Healthcare
+          </h5>
+          <p class="card-text text-light">
+            Supports telemedicine, online consultations, and emergency
+            healthcare services in rural regions.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="card usecase-card h-100">
+        <img src="images/a1.png" class="card-img-top" alt="Defense">
+        <div class="card-body">
+          <h5 class="card-title text-info">
+            <i class="fa-solid fa-shield-halved me-2"></i>Defense & Disaster
+          </h5>
+          <p class="card-text text-light">
+            Used by defense forces and disaster relief teams when ground
+            communication networks fail.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="card usecase-card h-100">
+        <img src="images/agri.png" class="card-img-top" alt="Agriculture">
+        <div class="card-body">
+          <h5 class="card-title text-info">
+            <i class="fa-solid fa-seedling me-2"></i>Agriculture
+          </h5>
+          <p class="card-text text-light">
+            Helps farmers access weather updates, crop monitoring,
+            and market prices in real time.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="card usecase-card h-100">
+        <img src="images/t1.png" class="card-img-top" alt="Transport">
+        <div class="card-body">
+          <h5 class="card-title text-info">
+            <i class="fa-solid fa-ship me-2"></i>Transport & Mobility
+          </h5>
+          <p class="card-text text-light">
+            Provides connectivity on ships, aircraft, trains,
+            and remote construction or mining sites.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<hr class="border border-light border-1 w-50 opacity-100" style="margin-left:25%;margin-top: 3%;"/>
+
+<div class="container mt-5">
+
+  <h1 class="text-center mb-2">Benefits & Limitations</h1>
+  <p class="text-center text-light mb-5">
+    Understanding the strengths and challenges of satellite internet technology
+  </p>
+
+  <div class="row g-4">
+
+    <div class="col-12 col-md-6">
+      <div class="info-card h-100">
+        <h4 class="text-info mb-2">
+          <i class="fa-solid fa-circle-check me-2"></i>Benefits
+        </h4>
+
+        <p class="small text-light mb-4">
+          Why satellite internet is important for connectivity in India
+        </p>
+
+        <ul class="list-unstyled info-list">
+          <li>
+            <span class="icon-badge success">
+              <i class="fa-solid fa-globe"></i>
+            </span>
+            Works in remote, rural, and hard-to-reach regions
+          </li>
+          <li>
+            <span class="icon-badge success">
+              <i class="fa-solid fa-bolt"></i>
+            </span>
+            Fast deployment without laying cables
+          </li>
+          <li>
+            <span class="icon-badge success">
+              <i class="fa-solid fa-satellite-dish"></i>
+            </span>
+            Reliable connectivity on ships, aircraft, and mobile sites
+          </li>
+          <li>
+            <span class="icon-badge success">
+              <i class="fa-solid fa-shield"></i>
+            </span>
+            Critical during disasters and emergencies
+          </li>
+          <li>
+            <span class="icon-badge success">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </span>
+            Supports education, healthcare, and Digital India
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <div class="info-card h-100">
+        <h4 class="text-info mb-2">
+          <i class="fa-solid fa-circle-xmark me-2"></i>Limitations
+        </h4>
+
+        <p class="small text-light mb-4">
+          Challenges that affect performance and cost
+        </p>
+
+        <ul class="list-unstyled info-list">
+          <li>
+            <span class="icon-badge danger">
+              <i class="fa-solid fa-clock"></i>
+            </span>
+            Higher latency than fiber-based internet
+          </li>
+          <li>
+            <span class="icon-badge danger">
+              <i class="fa-solid fa-cloud-rain"></i>
+            </span>
+            Heavy rain or storms can reduce signal quality
+          </li>
+          <li>
+            <span class="icon-badge danger">
+              <i class="fa-solid fa-indian-rupee-sign"></i>
+            </span>
+            Equipment and subscription costs are higher
+          </li>
+          <li>
+            <span class="icon-badge danger">
+              <i class="fa-solid fa-gauge-high"></i>
+            </span>
+            Speed may fluctuate during peak usage
+          </li>
+          <li>
+            <span class="icon-badge danger">
+              <i class="fa-solid fa-ban"></i>
+            </span>
+            Not ideal for real-time gaming or stock trading
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+<hr class="border border-light border-1 w-50 opacity-100" style="margin-left:25%;margin-top: 3%;"/>
+
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Internet Comparison</h1>
+
+  <div class="row g-4">
+
+    <div class="col-12 col-md-4">
+      <div class="comparison-card h-100">
+        <div class="card-body">
+          <h4 class="text-info mb-3 text-center">
+            <i class="fa-solid fa-satellite me-2"></i>Satellite Internet
+          </h4>
+          <ul class="list-unstyled comparison-list">
+            <li><i class="fa-solid fa-globe"></i> Coverage: Very Wide</li>
+            <li><i class="fa-solid fa-gauge-high"></i> Speed: Medium–High</li>
+            <li><i class="fa-solid fa-clock"></i> Latency: High</li>
+            <li><i class="fa-solid fa-cloud-rain"></i> Weather Impact: Yes</li>
+            <li><i class="fa-solid fa-screwdriver-wrench"></i> Setup: Dish + Modem</li>
+            <li><i class="fa-solid fa-star"></i> Best For: Remote Areas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="comparison-card h-100 best-card">
+        <div class="card-body">
+          <h4 class="text-info mb-3 text-center">
+            <i class="fa-solid fa-network-wired me-2"></i>Fiber Internet
+          </h4>
+          <ul class="list-unstyled comparison-list">
+            <li><i class="fa-solid fa-city"></i> Coverage: Urban</li>
+            <li><i class="fa-solid fa-bolt"></i> Speed: Very High</li>
+            <li><i class="fa-solid fa-clock"></i> Latency: Very Low</li>
+            <li><i class="fa-solid fa-cloud"></i> Weather Impact: No</li>
+            <li><i class="fa-solid fa-plug"></i> Setup: Wired</li>
+            <li><i class="fa-solid fa-star"></i> Best For: Homes & Offices</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="comparison-card h-100">
+        <div class="card-body">
+          <h4 class="text-info mb-3 text-center">
+            <i class="fa-solid fa-tower-cell me-2"></i>Mobile Broadband
+          </h4>
+          <ul class="list-unstyled comparison-list">
+            <li><i class="fa-solid fa-location-dot"></i> Coverage: Moderate</li>
+            <li><i class="fa-solid fa-gauge"></i> Speed: Medium</li>
+            <li><i class="fa-solid fa-clock"></i> Latency: Medium</li>
+            <li><i class="fa-solid fa-cloud-sun"></i> Weather Impact: Slight</li>
+            <li><i class="fa-solid fa-sim-card"></i> Setup: SIM / Router</li>
+            <li><i class="fa-solid fa-star"></i> Best For: Mobile Users</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<hr class="border-info mt-5 opacity-75">
+<footer class="footer-custom pt-4 pb-3">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-4">
+<h5><i class="fa-solid fa-satellite me-2"></i>Satellite Internet India</h5>
+<p class="small">
+A platform explaining satellite internet technology and its role in connecting remote regions of India.
+</p>
+</div>
+
+<div class="col-md-2">
+<h6>Quick Links</h6>
+<ul class="list-unstyled small">
+<li><a href="#" class="footer-link">Home</a></li>
+<li><a href="#" class="footer-link">Use Cases</a></li>
+<li><a href="#" class="footer-link">Future</a></li>
+</ul>
+</div>
+
+<div class="col-md-3">
+<h6>Resources</h6>
+<ul class="list-unstyled small">
+<li><a href="#" class="footer-link">Satellite Map</a></li>
+<li><a href="#" class="footer-link">Providers</a></li>
+<li><a href="#" class="footer-link">FAQ</a></li>
+</ul>
+</div>
+
+<div class="col-md-3">
+<h6>Connect</h6>
+<a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+<a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+<a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+</div>
+
+</div>
+
+<hr class="border-info opacity-75">
+
+<div class="text-center small">
+© 2025 Satellite Internet India | Designed by DEVIKA SAINI
+</div>
+
+</div>
+
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
