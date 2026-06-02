@@ -71,6 +71,20 @@
       transition: color 0.3s ease;
     }
 
+    .profile-img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 15px auto;
+  border-radius: 50%;
+  overflow: hidden;
+ }
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
     h2.section-title {
       margin: auto;
       margin-top: 30px;
@@ -138,6 +152,7 @@ a:hover{
 
 .profile-box {
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .role {
@@ -239,10 +254,15 @@ a:hover{
 
 <div class="resume-container">
 
-  <!-- LEFT COLUMN -->
+
   <div class="left">
 
     <div class="profile-box">
+
+       <div class="profile-img">
+      <img src="images/profile.png" alt="Profile Image">
+    </div>
+
       <h2>Devika Saini</h2>
       <p class="role">Aspiring UI/UX Designer & Frontend Developer</p>
     </div>
@@ -265,8 +285,7 @@ a:hover{
 
   </div>
 
-  <!-- RIGHT COLUMN -->
-  <div class="right">
+ <div class="right">
 
     <div class="resume-section">
       <h3>About Me</h3>
@@ -281,6 +300,12 @@ enhance skills and gain practical experience.
     </div>
 <div class="resume-section">
   <h3>Education</h3>
+  
+  <div class="card">
+    <h4>Delhi University (SOL)</h4>
+    <span>2023 - 2026</span>
+    <p>Bcom(Hons)</p>
+  </div>
 
   <div class="card">
     <h4>Graphic & Website Designing</h4>
@@ -294,13 +319,15 @@ enhance skills and gain practical experience.
       <h3>Projects</h3>
 
       <div class="card">
+        <a href="https://www.figma.com/proto/Wfp4t4qFzTrzyTqRkMCnOd/UI-UX_ARENA_GTB_DELHI_DEVIKA?node-id=1-2&p=f&t=dA2TMXblw7BdEYOa-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2">
         <h4>Home Controlling App UI</h4>
-        <p>A minimal and intuitive home control app UI that enables seamless management of smart devices with real-time controls, automation modes, and a clean card-based dashboard.</p>
+        <p>A minimal and intuitive home control app UI that enables seamless management of smart devices with real-time controls, automation modes, and a clean card-based dashboard.</p></a>
         </div>
 
       <div class="card">
+        <a href="https://www.figma.com/proto/gH5KrvsKQZkE84bogv9gGX/Untitled?node-id=3-4820&p=f&t=gGLrnHfOpMEi6kxe-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2">
         <h4>Book Selling App UI</h4>
-        <p>A clean and user-friendly book selling app UI that offers easy browsing, smart search, and seamless checkout for a smooth reading purchase experience.</p>
+        <p>A clean and user-friendly book selling app UI that offers easy browsing, smart search, and seamless checkout for a smooth reading purchase experience.</p></a>
       </div>
 
     </div>
@@ -318,7 +345,7 @@ enhance skills and gain practical experience.
 
 
 
- <hr style="width: 50%;margin-top:600px ;"/>
+ <hr style="width: 50%;"/>
    <div id="footer">
   <div class="footer-content">
     <p>© 2025 Devika Saini</p>
