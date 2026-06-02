@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELOCITY X NIKE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --neon-cyan: #00f0ff;
+            --neon-pink: #ff00aa;
+            --neon-purple: #8b00ff;
+            --dark-bg: #0a0a0f;
+            --dark-card: #12121a;
+            --text-light: #ffffff;
+            --text-muted: #b4c3f2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            overflow-x: hidden;
+             padding-top:81px !important;
+        }
+
+        h1, h2, h3, .display-text {
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .text-gradient {
+            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .navbar{
+    background: rgba(10,10,15,.95) !important;
+    backdrop-filter: blur(20px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    min-height:80px;
+}
+
+.navbar .container{
+    max-width:1400px;
+}
+
+        .navbar-brand {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            color: var(--neon-cyan) !important;
+        }
+
+        .nav-link {
+            color: var(--text-light) !important;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: color 0.3s;
+            font-size:.75rem !important;
+            letter-spacing:1px !important;
+            padding:.5rem .8rem !important;
+            white-space:nowrap;
+        }
+
+        .nav-link:hover {
+            color: var(--neon-cyan) !important;
+        }
+
+        .white-line{
+    position:fixed !important;
+    top:80px !important;
+    left:0;
+    width:100%;
+    height:1px;
+    margin-top:0 !important;
+    z-index:1030;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.8),
+        transparent
+    );
+}
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 50%, rgba(0, 240, 255, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 50%, rgba(255, 0, 170, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 9vw, 7rem);
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            letter-spacing: 4px;
+        }
+
+        .product-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-top: 2rem;
+        }
+
+        .product-image {
+            width: 100%;
+            max-width: 450px;
+            filter: drop-shadow(0 20px 50px rgba(0, 240, 255, 0.25));
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .feature-callout {
+            position: absolute;
+            background: rgba(18, 18, 26, 0.95);
+            border: 2px solid var(--neon-cyan);
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.3);
+        }
+
+        .feature-callout:hover {
+            transform: scale(1.15);
+            box-shadow: 0 0 40px rgba(0, 240, 255, 0.5);
+            border-color: var(--neon-pink);
+            background: rgba(18, 18, 26, 1);
+        }
+
+        .feature-callout i {
+            font-size: 1.8rem;
+            color: var(--neon-cyan);
+            margin-bottom: 2px;
+        }
+
+        .feature-callout span {
+            font-size: 0.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ffffff;
+        }
+
+        .callout-1 { top: 5%; left: -5%; }
+        .callout-2 { top: 45%; right: -8%; }
+        .callout-3 { bottom: 8%; left: 0%; }
+
+        @media (max-width: 991px) {
+            .feature-callout {
+                position: relative;
+                display: inline-flex;
+                width: 85px;
+                height: 85px;
+                margin: 8px;
+                top: auto !important;
+                left: auto !important;
+                right: auto !important;
+                bottom: auto !important;
+            }
+            
+            .product-wrapper {
+                display: block;
+                text-align: center;
+            }
+            
+            .feature-callouts-container {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 1rem;
+            }
+        }
+
+        .btn-neon {
+            background: transparent;
+            border: 2px solid var(--neon-cyan);
+            color: var(--neon-cyan);
+            padding: 1rem 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-neon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--neon-cyan);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+
+        .btn-neon:hover {
+            color: var(--dark-bg);
+        }
+
+        .btn-neon:hover::before {
+            left: 0;
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
+            border: none;
+            color: var(--dark-bg);
+            padding: 1rem 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 240, 255, 0.4);
+        }
+
+        .features-section {
+            padding: 8rem 0;
+        }
+
+        .feature-card {
+            background: var(--dark-card);
+            border: 1px solid rgba(0, 240, 255, 0.1);
+            padding: 2.5rem;
+            height: 100%;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 0;
+            background: var(--neon-cyan);
+            transition: height 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--neon-cyan);
+        }
+
+        .feature-card:hover::before {
+            height: 100%;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--neon-cyan);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .specs-section {
+            padding: 6rem 0;
+            background: linear-gradient(180deg, var(--dark-bg) 0%, var(--dark-card) 100%);
+        }
+
+        .spec-item {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .spec-value {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--neon-cyan);
+        }
+
+        .spec-label {
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+        }
+
+        .tech-section {
+            padding: 6rem 0;
+            background: var(--dark-card);
+        }
+
+        .tech-card {
+            background: var(--dark-bg);
+            padding: 2rem;
+            border: 1px solid rgba(0, 240, 255, 0.15);
+        }
+
+        .tech-card i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-card h4 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+        }
+
+        .tech-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .cta-section {
+            padding: 8rem 0;
+            position: relative;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 240, 255, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .price-tag {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin: 2rem 0;
+        }
+
+        .price-tag span {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+        }
+
+        footer {
+            background: var(--dark-card);
+            padding: 3rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-brand {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            color: var(--neon-cyan);
+        }
+
+        .social-links a {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--neon-cyan);
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+    
+/* PORTFOLIO UPGRADES */
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background-image:
+linear-gradient(rgba(0,240,255,.04) 1px, transparent 1px),
+linear-gradient(90deg, rgba(0,240,255,.04) 1px, transparent 1px);
+background-size:60px 60px;
+pointer-events:none;
+}
+.text-muted-custom{color:var(--text-muted);}
+.navbar{border-bottom:1px solid rgba(255,255,255,.08);}
+.navbar-toggler{border-color:rgba(255,255,255,.2);}
+.navbar-toggler-icon{filter:invert(1);}
+.reveal{opacity:0;transform:translateY(50px);transition:.8s ease;}
+.reveal.active{opacity:1;transform:translateY(0);}
+.product-image{transition:transform .25s ease;}
+
+</style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">VELOCITY<span class="text-gradient"> X</span> NIKE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                   <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+<li class="nav-item"><a class="nav-link" href="#specs">specs</a></li>                   
+<li class="nav-item"><a class="nav-link" href="#technology">Tech</a></li>
+<li class="nav-item"><a class="nav-link" href="#why">Why</a></li>
+<li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+<li class="nav-item"><a class="nav-link" href="#per">Performance</a></li>
+<li class="nav-item"><a class="nav-link" href="#review">Reviews</a></li>
+                </ul>
+                <div class="d-flex align-items-center ms-3">
+    <a href="#order" class="btn btn-primary-custom btn-sm">Pre-Order</a>
+</div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="white-line"></div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="fade-in-up">
+                        <p class="text-uppercase" style="color: var(--neon-cyan); letter-spacing: 4px; margin-bottom: 1rem;">Introducing</p>
+                        <h1 class="hero-title">RUN BEYOND<br><span class="text-gradient">LIMITS</span></h1>
+                        <p class="hero-subtitle">The most advanced running shoe ever engineered</p>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="#order" class="btn btn-primary-custom">Pre-Order Now</a>
+                            <a href="#features" class="btn btn-neon">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="product-wrapper">
+
+                        <div class="feature-callout callout-1">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                            <span>BOOST</span>
+                        </div>
+                        <div class="feature-callout callout-2">
+                            <i class="bi bi-feather"></i>
+                            <span>LIGHT</span>
+                        </div>
+                        <div class="feature-callout callout-3">
+                            <i class="bi bi-shield-check"></i>
+                            <span>GRIP</span>
+                        </div>
+                        
+                        <img src="images/1.png" alt="Velocity X Nike" class="product-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold mb-3">ENGINEERED FOR <span class="text-gradient">SPEED</span></h2>
+                <p class="--text-muted" style="max-width: 600px; margin: 0 auto;">Every gram, every millimeter designed for one purpose — to make you faster than ever before.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card reveal">
+                        <i class="bi bi-lightning-charge-fill feature-icon"></i>
+                        <h3>Reactive Boost</h3>
+                        <p>Our revolutionary foam returns 87% of energy with every stride, propelling you forward effortlessly.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card reveal">
+                        <i class="bi bi-wind feature-icon"></i>
+                        <h3>Featherweave</h3>
+                        <p>Weighing just 180g, the ultra-light mesh adapts to your foot like a second skin.</p>
+                    </div>
+                </div>
+                    <div class="col-lg-3 col-md-6">
+                    <div class="feature-card reveal">
+                        <i class="bi bi-grip-horizontal feature-icon"></i>
+                        <h3>Carbon Plate</h3>
+                        <p>Full-length carbon fiber plate provides explosive toe-off and unmatched stability.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card reveal">
+                        <i class="bi bi-moisture feature-icon"></i>
+                        <h3>HyperBreath</h3>
+                        <p>Advanced ventilation system keeps your feet cool and dry, even in the most intense conditions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="specs" class="specs-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-3">
+                    <div class="spec-item">
+                        <span class="spec-value">180g</span>
+                        <span class="spec-label">Weight</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="spec-item">
+                        <span class="spec-value">32mm</span>
+                        <span class="spec-label">Heel Stack</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="spec-item">
+                        <span class="spec-value">8mm</span>
+                        <span class="spec-label">Drop</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="spec-item">
+                        <span class="spec-value">50%</span>
+                        <span class="spec-label">Energy Return</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="technology" class="py-5" style="background: var(--dark-card);">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <h2 class="display-4 fw-bold mb-4">THE TECH <span class="text-gradient">INSIDE</span></h2>
+                    <p class="--text-muted mb-4">Every component engineered using advanced simulation and professional athlete testing.</p>
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-center mb-3">
+                            <i class="bi bi-check-circle-fill" style="color: var(--neon-cyan); margin-right: 1rem;"></i>
+                            <span>AI-optimized foam structure</span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <i class="bi bi-check-circle-fill" style="color: var(--neon-cyan); margin-right: 1rem;"></i>
+                            <span>3D-printed heel collar</span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <i class="bi bi-check-circle-fill" style="color: var(--neon-cyan); margin-right: 1rem;"></i>
+                            <span>Recycled ocean plastic mesh</span>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill" style="color: var(--neon-cyan); margin-right: 1rem;"></i>
+                            <span>Bio-based rubber outsole</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-7 mt-4 mt-lg-0">
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <div style="background: var(--dark-bg); padding: 2rem; border: 1px solid rgba(0,240,255,0.2);">
+                                <i class="bi bi-cpu" style="font-size: 3rem; color: var(--neon-cyan);"></i>
+                                <h4 class="mt-3">AI Design</h4>
+                                <p class="--text-muted mb-0">Machine learning optimized lattice structure</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div style="background: var(--dark-bg); padding: 2rem; border: 1px solid rgba(255,0,170,0.2);">
+                                <i class="bi bi-recycle" style="font-size: 3rem; color: var(--neon-pink);"></i>
+                                <h4 class="mt-3">Sustainable</h4>
+                                <p class="--text-muted mb-0">40% recycled materials throughout</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="why" class="py-5" style="background:var(--dark-card);">
+<div class="container">
+<div class="text-center mb-5">
+<h2 class="display-4 fw-bold">WHY <span class="text-gradient">VELOCITY X NIKE</span></h2>
+</div>
+<div class="row g-4">
+<div class="col-md-3"><div class="feature-card reveal"><h3>87% Return</h3><p>Maximum energy transfer on every stride.</p></div></div>
+<div class="col-md-3"><div class="feature-card reveal"><h3>180g Weight</h3><p>Ultra-light construction for elite runners.</p></div></div>
+<div class="col-md-3"><div class="feature-card reveal"><h3>Carbon Plate</h3><p>Explosive toe-off and enhanced stability.</p></div></div>
+<div class="col-md-3"><div class="feature-card reveal"><h3>Sustainable</h3><p>Built with recycled performance materials.</p></div></div>
+</div>
+</div>
+</section>
+
+<section id="gallery" class="py-5">
+<div class="container">
+<div class="text-center mb-5">
+<h2 class="display-4 fw-bold">PRODUCT <span class="text-gradient">GALLERY</span></h2>
+</div>
+<div class="row g-4">
+<div class="col-md-4"><img src="images/1.png" class="img-fluid rounded border" alt=""></div>
+<div class="col-md-4"><img src="images/2.png" class="img-fluid rounded border" alt=""></div>
+<div class="col-md-4"><img src="images/3.png" class="img-fluid rounded border" alt=""></div>
+</div>
+</div>
+</section>
+
+<section id="per" class="specs-section">
+<div class="container">
+<div class="text-center mb-5">
+<h2 class="display-4 fw-bold">PERFORMANCE <span class="text-gradient">METRICS</span></h2>
+</div>
+<div class="row">
+<div class="col-md-3 col-6"><div class="spec-item"><div class="spec-value">87%</div><div class="spec-label">Energy Return</div></div></div>
+<div class="col-md-3 col-6"><div class="spec-item"><div class="spec-value">180g</div><div class="spec-label">Weight</div></div></div>
+<div class="col-md-3 col-6"><div class="spec-item"><div class="spec-value">500+</div><div class="spec-label">Test Miles</div></div></div>
+<div class="col-md-3 col-6"><div class="spec-item"><div class="spec-value">32mm</div><div class="spec-label">Cushioning</div></div></div>
+</div>
+</div>
+</section>
+
+<section id="review" class="py-5">
+<div class="container">
+<div class="text-center mb-5">
+<h2 class="display-4 fw-bold">ATHLETE <span class="text-gradient">REVIEWS</span></h2>
+</div>
+<div class="row g-4">
+<div class="col-md-4"><div class="feature-card reveal"><p>"The fastest shoe I've ever raced in."</p><strong>Sarah K.</strong></div></div>
+<div class="col-md-4"><div class="feature-card reveal"><p>"Incredible responsiveness and comfort."</p><strong>Michael T.</strong></div></div>
+<div class="col-md-4"><div class="feature-card reveal"><p>"Feels like you're running on air."</p><strong>Emma R.</strong></div></div>
+</div>
+</div>
+</section>
+
+<section id="order" class="cta-section">
+        <div class="container text-center">
+            <div class="fade-in-up">
+                <h2 class="display-4 fw-bold mb-3">READY TO <span class="text-gradient">FLY?</span></h2>
+                <p class="--text-muted mb-4">Limited first edition. Ships worldwide April 2025.</p>
+                <div class="price-tag">
+                    $249<span>/pair</span>
+                </div>
+                <a href="#" class="btn btn-primary-custom btn-lg">Pre-Order Now</a>
+                <p class="mt-4" style="color: var(--text-muted); font-size: 0.85rem;">Free shipping • 30-day returns • 2-year warranty</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <h3 class="footer-brand">
+                    VELOCITY<span class="text-gradient"> X</span> NIKE
+                </h3>
+
+                <p class="mt-3 text-muted-custom">
+                    Designed for athletes who demand speed, precision,
+                    and next-generation performance.
+                </p>
+            </div>
+
+            <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                <h6 class="mb-3">CONTACT US</h6>
+
+                <p class="mb-2">+91 9996548732</p>
+                <p class="mb-2">velocityxnike@gmail.com</p>
+                <p class="mb-2"></p>
+                <p class="mb-0"></p>
+            </div>
+
+            <div class="col-lg-4 text-lg-end text-center">
+                <h6 class="mb-3">FOLLOW THE JOURNEY</h6>
+
+                <div class="social-links mb-3">
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-youtube"></i></a>
+                </div>
+
+                <p class="text-muted-custom mb-0">
+                    Concept Design by <strong>Devika Saini</strong>
+                </p>
+            </div>
+
+        </div>
+
+        <hr style="border-color: rgba(255,255,255,.08); margin:2rem 0;">
+
+        <div class="text-center">
+            <small class="text-muted-custom">
+                Velocity X Nike • Future of Running • Concept Project
+            </small>
+        </div>
+
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+const shoe=document.querySelector('.product-image');
+document.addEventListener('mousemove',(e)=>{
+ if(!shoe) return;
+ const x=(window.innerWidth/2-e.clientX)/50;
+ const y=(window.innerHeight/2-e.clientY)/50;
+ shoe.style.transform=`translate(${x}px,${y}px)`;
+});
+
+const reveals=document.querySelectorAll('.reveal');
+function revealItems(){
+ reveals.forEach(el=>{
+  if(el.getBoundingClientRect().top < window.innerHeight-100){
+   el.classList.add('active');
+  }
+ });
+}
+window.addEventListener('scroll',revealItems);
+revealItems();
+</script>
+
+</body>
+</html>                     
